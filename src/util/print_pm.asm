@@ -13,9 +13,9 @@ print_string_pm:
 
         cmp al, 0
         je .done
-        mov [edx], ax
-        inc ebx     ; 移动到下一个字符
-        add edx, 2  ; 移动到下一格
+        mov [edx], ax   ; 写数据到显存中
+        inc ebx         ; 移动到下一个字符
+        add edx, 2      ; 移动到下一格
         jmp .loop
 
     .done:

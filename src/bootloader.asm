@@ -27,8 +27,8 @@ main:
 %include "util/print.asm"
 %include "util/print_pm.asm"
 %include "util/disk_load.asm"
-%include "gdt.asm"
-%include "switch_to_pm.asm"
+%include "bootload/gdt.asm"
+%include "bootload/switch_to_pm.asm"
 
 [BITS 32]
 BEGIN_PM:
