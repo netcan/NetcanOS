@@ -1,3 +1,4 @@
+[BITS 16]
 ; 读取磁盘数据到[ES:BX]，dl指定第几个磁盘，dh指定读取几块扇区
 disk_load:
     push dx
