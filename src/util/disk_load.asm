@@ -12,8 +12,8 @@ disk_load:
     pop dx
 
     jc disk_error   ; 读取失败会设置CF位
-    cmp al, dh      ; al记录了成功读取扇区块数
-    jne disk_error
+	cmp al, dh      ; al记录了成功读取扇区块数
+	jne disk_error
     ret
 
 
@@ -24,5 +24,5 @@ disk_error:
 
 
 ; 全局变量区
-DISK_ERROR_MSG: db "DISK read error!", 0
+DISK_ERROR_MSG: db "DISK read error!", 0xa, 0xd, 0
 

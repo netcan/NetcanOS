@@ -1,2 +1,2 @@
-floppya: 1_44="src/bootloader.bin", status=inserted
+floppya: 1_44="src/NetcanOS.img", status=inserted
 boot: a

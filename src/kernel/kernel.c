@@ -8,6 +8,6 @@
 
 void main() {
 	// 显存地址
-	char* const vram_address = (char*)0x8000;
+	char* const vram_address = (char*)0xb8000;
 	*vram_address = 'X';
 }
