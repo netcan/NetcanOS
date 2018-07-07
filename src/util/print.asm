@@ -1,5 +1,12 @@
-print_hex:		; 使用dx传参
+; 打印消息
+print_hex:				; 使用dx传参
 	pusha
+	mov cx, 4			; 清零
+	mov al, [hex_digit] ; '0'
+	.clear:
+		mov bx, cx
+		mov [hex_out + 1 + bx], al
+		loop .clear
 
 	mov cx, 4
 	.repeat:
@@ -34,5 +41,6 @@ print_string:	; 使用bx传参，bx为字符串地址
 		popa
 		ret
 
+; 全局变量区
 hex_out: db '0x0000', 0x0a, 0xd, 0 ; 模板串，CRLF
 hex_digit: db '0123456789abcdef'
