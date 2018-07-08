@@ -7,11 +7,18 @@
  ************************************************************************/
 #ifndef IO_H
 #define IO_H
+typedef unsigned int u32;
+typedef signed int s32;
+typedef unsigned short u16;
+typedef signed short s16;
+typedef unsigned char u8;
+typedef signed char s8;
+
 // in 指令，从IO端口读取数据
-unsigned char port_byte_in(unsigned short port);
-unsigned short port_word_in(unsigned short port);
+u8 port_byte_in(u16 port);
+u16 port_word_in(u16 port);
 
 // out 指令，往IO端口输出数据
-void port_byte_out(unsigned short port, unsigned char data);
-void port_word_out(unsigned short port, unsigned short data);
+void port_byte_out(u16 port, u8 data);
+void port_word_out(u16 port, u16 data);
 #endif

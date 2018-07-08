@@ -5,31 +5,46 @@
 	  > Mail: 1469709759@qq.com
 	  > Created Time: 2018-07-08 Sun 11:26:07 CST
  ************************************************************************/
+#include <io.h>
 
-// in 指令，从IO端口读取数据
-unsigned char port_byte_in(unsigned short port) {
-	// __asm__是ansi标准自带的
-	/* asm [volatile] ( AssemblerTemplate
-						: OutputOperands	// 输出寄存器的值到变量
-						[ : InputOperands	// 输入变量的值到寄存器
-						[ : Clobbers ] ])
-	*/
-	unsigned char ret;
+/** 从IO端口读取8位数据。
+ * @param port 端口
+ * @return 读取的数据。
+ */
+u8 port_byte_in(u16 port) {
+	/** __asm__是ansi标准自带的
+	 * asm [volatile] ( AssemblerTemplate
+	 *				   : OutputOperands	// 输出寄存器的值到变量
+	 *				   [ : InputOperands	// 输入变量的值到寄存器
+	 *				   [ : Clobbers ] ])
+	 */
+	u8 ret;
 	__asm__("in %%dx, %%al" : "=a"(ret) :  "d"(port));
 	return ret;
 }
 
-// out 指令，往IO端口输出数据
-void port_byte_out(unsigned short port, unsigned char data) {
+/** 从IO端口写入8位数据。
+ * @param port 端口
+ * @param data 需要写的数据
+ */
+void port_byte_out(u16 port, u8 data) {
 	__asm__("out %%al, %%dx" : :"a"(data), "d"(port));
 }
 
-unsigned short port_word_in(unsigned short port) {
-	unsigned short ret;
+/** 从IO端口读取16位数据。
+ * @param port 端口
+ * @return 读取的数据。
+ */
+u16 port_word_in(u16 port) {
+	u16 ret;
 	__asm__("in %%dx, %%ax" : "=a"(ret) : "d"(port));
 	return ret;
 }
 
-void port_word_out(unsigned short port, unsigned short data) {
+/** 从IO端口写入16位数据。
+ * @param port 端口
+ * @param data 需要写的数据
+ */
+void port_word_out(u16 port, u16 data) {
 	__asm__("out %%ax, %%dx" : : "a"(port), "d"(data));
 }

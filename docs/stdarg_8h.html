@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/libc/stdarg.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee3448fa1dc3d93b4fb7d6fba5be0d5c.html">libc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle">
+<div class="title">stdarg.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="stdarg_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a8754a3fcf3dbe468869b0311fb5394c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#a8754a3fcf3dbe468869b0311fb5394c5">va_start</a>(ap,  pN)&#160;&#160;&#160;((ap) = ((<a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a>) (&amp;pN) + <a class="el" href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a>(pN)))</td></tr>
+<tr class="separator:a8754a3fcf3dbe468869b0311fb5394c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9b3b9085ec072324c5fdac2b40304e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#acd9b3b9085ec072324c5fdac2b40304e">va_end</a>(ap)&#160;&#160;&#160;((void)0)</td></tr>
+<tr class="separator:acd9b3b9085ec072324c5fdac2b40304e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb46f660b756eb161fb4aa8969925c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#afeb46f660b756eb161fb4aa8969925c7">va_arg</a>(ap,  t)</td></tr>
+<tr class="separator:afeb46f660b756eb161fb4aa8969925c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afddf91bec14da530be77e7f9be98bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a>(t)&#160;&#160;&#160;(((sizeof(t) + sizeof(int) - 1) / sizeof(int)) * sizeof(int))</td></tr>
+<tr class="separator:a5afddf91bec14da530be77e7f9be98bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:abaefbc6cabb217bf0138d4f9c94d4775"><td class="memItemLeft" align="right" valign="top">typedef char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a></td></tr>
+<tr class="separator:abaefbc6cabb217bf0138d4f9c94d4775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a5afddf91bec14da530be77e7f9be98bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5afddf91bec14da530be77e7f9be98bf">&#9670;&nbsp;</a></span>__va_argsiz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __va_argsiz</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t</td><td>)</td>
+          <td>&#160;&#160;&#160;(((sizeof(t) + sizeof(int) - 1) / sizeof(int)) * sizeof(int))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afeb46f660b756eb161fb4aa8969925c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb46f660b756eb161fb4aa8969925c7">&#9670;&nbsp;</a></span>va_arg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_arg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">(((ap) = (ap) + <a class="code" href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a>(t)),        \</div><div class="line">     *((t*) (<span class="keywordtype">void</span>*) ((ap) - <a class="code" href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a>(t))))</div><div class="ttc" id="stdarg_8h_html_a5afddf91bec14da530be77e7f9be98bf"><div class="ttname"><a href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a></div><div class="ttdeci">#define __va_argsiz(t)</div><div class="ttdef"><b>Definition:</b> stdarg.h:18</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acd9b3b9085ec072324c5fdac2b40304e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9b3b9085ec072324c5fdac2b40304e">&#9670;&nbsp;</a></span>va_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_end</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap</td><td>)</td>
+          <td>&#160;&#160;&#160;((void)0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8754a3fcf3dbe468869b0311fb5394c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8754a3fcf3dbe468869b0311fb5394c5">&#9670;&nbsp;</a></span>va_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define va_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ap, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pN&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((ap) = ((<a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a>) (&amp;pN) + <a class="el" href="stdarg_8h.html#a5afddf91bec14da530be77e7f9be98bf">__va_argsiz</a>(pN)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="abaefbc6cabb217bf0138d4f9c94d4775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaefbc6cabb217bf0138d4f9c94d4775">&#9670;&nbsp;</a></span>va_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char* <a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

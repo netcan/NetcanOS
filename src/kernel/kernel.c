@@ -8,6 +8,9 @@
 
 #include <video_terminal.h>
 
+/**
+ * 内核入口。
+ */
 void main() {
 	print("Hello World! From Kernel.c");
 }
