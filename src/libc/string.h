@@ -1,13 +1,14 @@
 /*************************************************************************
-	> File Name: kernel/kernel.c
+	> File Name: libc/string.h
 	  > Author: Netcan
 	  > Blog: http://www.netcan666.com
 	  > Mail: 1469709759@qq.com
-	  > Created Time: 2018-07-07 Sat 21:57:42 CST
+	  > Created Time: 2018-07-08 Sun 14:00:23 CST
  ************************************************************************/
 
-#include <video_terminal.h>
-
-void main() {
-	print("Hello World! From Kernel.c");
-}
+#ifndef STRING_H
+#define STRING_H
+#include <stddef.h>
+void* memcpy( void *dest, const void *src, size_t count );
+void *memset(void *s, int c, size_t n);
+#endif
