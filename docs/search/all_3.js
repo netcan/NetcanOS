@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['flag',['FLAG',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ec',1,'stdio.c']]]
+  ['clear_5fvt',['clear_vt',['../video__terminal_8c.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c'],['../video__terminal_8h.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c']]],
+  ['cs',['cs',['../structregisters.html#a1968121dffec811c3a5ae3d71697ae80',1,'registers']]]
 ];

@@ -10,10 +10,17 @@ HEADERS = $(wildcard kernel/*.h drivers/*.h libc/*.h)
 OBJS = $(C_SOURCES:.c=.o) # 将.c替换为.o
 
 
-all: NetcanOS.img
+all: NetcanOS.bin
 
-NetcanOS.img: boot/bootloader.bin kernel/kernel.bin
+NetcanOS.bin: boot/bootloader.bin kernel/kernel.bin
 	cat $^ > $@
+
+# 调试用
+kernel/kernel.elf: kernel/kernel_entry.o\
+	kernel/dt_flush.o\
+	kernel/interrupts.o\
+	$(OBJS)
+	$(LD) -o $@ -Ttext 0x1000 $^
 
 kernel/kernel.bin: kernel/kernel.elf
 	$(OBJCOPY) -O binary $< $@
@@ -22,23 +29,19 @@ kernel/kernel.bin: kernel/kernel.elf
 	$(CC) $(CFLAGS) $< -o $@
 
 %.o: %.asm
-	$(NASM) $< -f elf -I boot/ -o $@
+	$(NASM) $< -g -f elf -I boot/ -o $@
 
 %.bin: %.asm
 	$(NASM) $< -f bin -I boot/ -o $@
 
-# 调试用
-kernel/kernel.elf: kernel/kernel_entry.o $(OBJS)
-	$(LD) -o $@ -Ttext 0x1000 $^
-
-run: NetcanOS.img
+run: NetcanOS.bin
 	#bochs
-	qemu-system-i386 -fda NetcanOS.img
+	qemu-system-i386 -fda NetcanOS.bin
 
-debug: NetcanOS.img kernel/kernel.elf kernel.gdb
+debug: NetcanOS.bin kernel/kernel.elf kernel.gdb
 	$(GDB) -x kernel.gdb
 
 clean:
-	rm -rf NetcanOS.img
+	rm -rf NetcanOS.bin
 	rm -rf kernel/*.bin kernel/*.elf
 	rm -rf kernel/*.o boot/*.bin drivers/*.o libc/*.o

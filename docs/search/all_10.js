@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zeropad',['ZEROPAD',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ecaa68e4a41a52cd778065eaff1cba09dcb',1,'stdio.c']]]
+  ['tabsize',['TABSIZE',['../video__terminal_8h.html#a6511bfd47ae935d09420c07d0ae15af9',1,'video_terminal.h']]]
 ];

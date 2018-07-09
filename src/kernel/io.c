@@ -19,7 +19,7 @@ u8 port_byte_in(u16 port) {
 	 *				   [ : Clobbers ] ])
 	 */
 	u8 ret;
-	__asm__("in %%dx, %%al" : "=a"(ret) :  "d"(port));
+	asm volatile("in %%dx, %%al" : "=a"(ret) :  "d"(port));
 	return ret;
 }
 
@@ -28,7 +28,7 @@ u8 port_byte_in(u16 port) {
  * @param data 需要写的数据
  */
 void port_byte_out(u16 port, u8 data) {
-	__asm__("out %%al, %%dx" : :"a"(data), "d"(port));
+	asm volatile("out %%al, %%dx" : :"a"(data), "d"(port));
 }
 
 /** 从IO端口读取16位数据。
@@ -37,7 +37,7 @@ void port_byte_out(u16 port, u8 data) {
  */
 u16 port_word_in(u16 port) {
 	u16 ret;
-	__asm__("in %%dx, %%ax" : "=a"(ret) : "d"(port));
+	asm volatile("in %%dx, %%ax" : "=a"(ret) : "d"(port));
 	return ret;
 }
 
@@ -46,5 +46,5 @@ u16 port_word_in(u16 port) {
  * @param data 需要写的数据
  */
 void port_word_out(u16 port, u16 data) {
-	__asm__("out %%ax, %%dx" : : "a"(port), "d"(data));
+	asm volatile("out %%ax, %%dx" : : "a"(port), "d"(data));
 }

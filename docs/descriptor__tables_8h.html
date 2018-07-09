@@ -1,0 +1,1086 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/kernel/descriptor_tables.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cbd7f246bdf7dc0a50281a272327e6ed.html">kernel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">descriptor_tables.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="io_8h_source.html">io.h</a>&gt;</code><br />
+</div>
+<p><a href="descriptor__tables_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgdt__entry__struct.html">gdt_entry_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDT表结构。 1st flags: (present) (privilege) (descriptor type) type flags: (code) (conforming) (readable) (accessed) 2nd flags: (granularity) (32-bit default) (64-bit seg) (AVL)  <a href="structgdt__entry__struct.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgdt__ptr__struct.html">gdt_ptr_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDT指针，告诉CPU GDT表的位置。  <a href="structgdt__ptr__struct.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidt__entry__struct.html">idt_entry_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDT表结构  <a href="structidt__entry__struct.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidt__ptr__struct.html">idt_ptr_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDT表指针，告诉CPU IDT表的位置。  <a href="structidt__ptr__struct.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ab0b5c60e06a63669c783705278ff641e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structgdt__entry__struct.html">gdt_entry_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ab0b5c60e06a63669c783705278ff641e">gdt_entry_t</a></td></tr>
+<tr class="separator:ab0b5c60e06a63669c783705278ff641e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf3fa6f397bda8399e1afb6283b66ca"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structgdt__ptr__struct.html">gdt_ptr_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a3bf3fa6f397bda8399e1afb6283b66ca">gdt_ptr_t</a></td></tr>
+<tr class="separator:a3bf3fa6f397bda8399e1afb6283b66ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad45e5b006481ff3604f7b54bd26e13"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structidt__entry__struct.html">idt_entry_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a1ad45e5b006481ff3604f7b54bd26e13">idt_entry_t</a></td></tr>
+<tr class="separator:a1ad45e5b006481ff3604f7b54bd26e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c173f183e148c7a8a8c1ed9214b909e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structidt__ptr__struct.html">idt_ptr_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a4c173f183e148c7a8a8c1ed9214b909e">idt_ptr_t</a></td></tr>
+<tr class="separator:a4c173f183e148c7a8a8c1ed9214b909e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a923c646cd3d9bcd6802303757a1302db"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgdt__entry__struct.html">gdt_entry_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a923c646cd3d9bcd6802303757a1302db">__attribute__</a> ((packed))</td></tr>
+<tr class="memdesc:a923c646cd3d9bcd6802303757a1302db"><td class="mdescLeft">&#160;</td><td class="mdescRight">用packed让gcc不要对齐  <a href="#a923c646cd3d9bcd6802303757a1302db">更多...</a><br /></td></tr>
+<tr class="separator:a923c646cd3d9bcd6802303757a1302db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b68b6342c3a52a54ad89ec23945472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a29b68b6342c3a52a54ad89ec23945472">init_descriptor_tables</a> ()</td></tr>
+<tr class="memdesc:a29b68b6342c3a52a54ad89ec23945472"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化GDT表和IDT表。  <a href="#a29b68b6342c3a52a54ad89ec23945472">更多...</a><br /></td></tr>
+<tr class="separator:a29b68b6342c3a52a54ad89ec23945472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88eb8e98d943aa0461c01de3cb53493"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#af88eb8e98d943aa0461c01de3cb53493">isr0</a> ()</td></tr>
+<tr class="memdesc:af88eb8e98d943aa0461c01de3cb53493"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU定义的32个中断程序  <a href="#af88eb8e98d943aa0461c01de3cb53493">更多...</a><br /></td></tr>
+<tr class="separator:af88eb8e98d943aa0461c01de3cb53493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab0ed9ae661801c25f7dc9089c19f72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aeab0ed9ae661801c25f7dc9089c19f72">isr1</a> ()</td></tr>
+<tr class="separator:aeab0ed9ae661801c25f7dc9089c19f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e457875cca040c3f7c77b61e960b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a99e457875cca040c3f7c77b61e960b53">isr2</a> ()</td></tr>
+<tr class="separator:a99e457875cca040c3f7c77b61e960b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef268d2c16a7b318356451a05fd507b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a0ef268d2c16a7b318356451a05fd507b">isr3</a> ()</td></tr>
+<tr class="separator:a0ef268d2c16a7b318356451a05fd507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09af768d636144aaeaddd76c92a0a2f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a09af768d636144aaeaddd76c92a0a2f5">isr4</a> ()</td></tr>
+<tr class="separator:a09af768d636144aaeaddd76c92a0a2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91d821a4bcafb44933d92945727b0df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aa91d821a4bcafb44933d92945727b0df">isr5</a> ()</td></tr>
+<tr class="separator:aa91d821a4bcafb44933d92945727b0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fadb95f34937b1ded02c4171b4920ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a9fadb95f34937b1ded02c4171b4920ba">isr6</a> ()</td></tr>
+<tr class="separator:a9fadb95f34937b1ded02c4171b4920ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb6ec30db7077fb1c9c9d926a0fc407"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a7eb6ec30db7077fb1c9c9d926a0fc407">isr7</a> ()</td></tr>
+<tr class="separator:a7eb6ec30db7077fb1c9c9d926a0fc407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bc69345a3bb409665dbadb77a9d393"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a86bc69345a3bb409665dbadb77a9d393">isr8</a> ()</td></tr>
+<tr class="separator:a86bc69345a3bb409665dbadb77a9d393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb7c8490cbd623a3a2bf933ffedd131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aacb7c8490cbd623a3a2bf933ffedd131">isr9</a> ()</td></tr>
+<tr class="separator:aacb7c8490cbd623a3a2bf933ffedd131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8cb1341cf756883a2e7dc317d5272d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a3c8cb1341cf756883a2e7dc317d5272d">isr10</a> ()</td></tr>
+<tr class="separator:a3c8cb1341cf756883a2e7dc317d5272d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8145cf6ee1ef7834f459ba777d323c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a0d8145cf6ee1ef7834f459ba777d323c">isr11</a> ()</td></tr>
+<tr class="separator:a0d8145cf6ee1ef7834f459ba777d323c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f00421039cb85f9dd9375995c784bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a00f00421039cb85f9dd9375995c784bd">isr12</a> ()</td></tr>
+<tr class="separator:a00f00421039cb85f9dd9375995c784bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af985dcf66872ee696e5f30d819ac16a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#af985dcf66872ee696e5f30d819ac16a1">isr13</a> ()</td></tr>
+<tr class="separator:af985dcf66872ee696e5f30d819ac16a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b63eaa37c03743718870964a3429ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a8b63eaa37c03743718870964a3429ba8">isr14</a> ()</td></tr>
+<tr class="separator:a8b63eaa37c03743718870964a3429ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9160f355325318a990c106ad5c3b8954"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a9160f355325318a990c106ad5c3b8954">isr15</a> ()</td></tr>
+<tr class="separator:a9160f355325318a990c106ad5c3b8954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0980c10028b377643da169e52e5be7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#add0980c10028b377643da169e52e5be7">isr16</a> ()</td></tr>
+<tr class="separator:add0980c10028b377643da169e52e5be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d1e81e585bc7c56b46280006402f9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ac7d1e81e585bc7c56b46280006402f9e">isr17</a> ()</td></tr>
+<tr class="separator:ac7d1e81e585bc7c56b46280006402f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae685c5ca5ed9c9c5e7d297ad8d14de49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ae685c5ca5ed9c9c5e7d297ad8d14de49">isr18</a> ()</td></tr>
+<tr class="separator:ae685c5ca5ed9c9c5e7d297ad8d14de49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16b5f77287df551e63d3f0c67f8f75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ad16b5f77287df551e63d3f0c67f8f75d">isr19</a> ()</td></tr>
+<tr class="separator:ad16b5f77287df551e63d3f0c67f8f75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552d2aedae97d97083d3f9caf6ad59a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a552d2aedae97d97083d3f9caf6ad59a5">isr20</a> ()</td></tr>
+<tr class="separator:a552d2aedae97d97083d3f9caf6ad59a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af106b9a26e06abf17eebb6f7ae54f905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#af106b9a26e06abf17eebb6f7ae54f905">isr21</a> ()</td></tr>
+<tr class="separator:af106b9a26e06abf17eebb6f7ae54f905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b6f47f27ac3b31fc426f5c2a1a669c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aa4b6f47f27ac3b31fc426f5c2a1a669c">isr22</a> ()</td></tr>
+<tr class="separator:aa4b6f47f27ac3b31fc426f5c2a1a669c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277e9cc418a637ae584c1ff6525eb2e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a277e9cc418a637ae584c1ff6525eb2e1">isr23</a> ()</td></tr>
+<tr class="separator:a277e9cc418a637ae584c1ff6525eb2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea113ad8536ca8311ab00d077ece7f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a2ea113ad8536ca8311ab00d077ece7f1">isr24</a> ()</td></tr>
+<tr class="separator:a2ea113ad8536ca8311ab00d077ece7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e919f327e846f72b99de088ae9b822"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a73e919f327e846f72b99de088ae9b822">isr25</a> ()</td></tr>
+<tr class="separator:a73e919f327e846f72b99de088ae9b822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c118fd7e75c96d19da1bbaf87731e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a24c118fd7e75c96d19da1bbaf87731e4">isr26</a> ()</td></tr>
+<tr class="separator:a24c118fd7e75c96d19da1bbaf87731e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97e98084cbcdc21bf03ba314dc243e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ad97e98084cbcdc21bf03ba314dc243e0">isr27</a> ()</td></tr>
+<tr class="separator:ad97e98084cbcdc21bf03ba314dc243e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a5fe4d3cf67be0c67db612aa757c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ab2a5fe4d3cf67be0c67db612aa757c5f">isr28</a> ()</td></tr>
+<tr class="separator:ab2a5fe4d3cf67be0c67db612aa757c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cce4d55d6a199607cd3a9e2a33241b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a8cce4d55d6a199607cd3a9e2a33241b2">isr29</a> ()</td></tr>
+<tr class="separator:a8cce4d55d6a199607cd3a9e2a33241b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af868664393aedd51c04e3ddd48b8f84f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#af868664393aedd51c04e3ddd48b8f84f">isr30</a> ()</td></tr>
+<tr class="separator:af868664393aedd51c04e3ddd48b8f84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ae10cea59f9bb2f79c13b8036d81f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#af4ae10cea59f9bb2f79c13b8036d81f1">isr31</a> ()</td></tr>
+<tr class="separator:af4ae10cea59f9bb2f79c13b8036d81f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7866a72c705f3c8553dfb03c08e609d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a7866a72c705f3c8553dfb03c08e609d6">limit_low</a></td></tr>
+<tr class="memdesc:a7866a72c705f3c8553dfb03c08e609d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment limit(0:15)  <a href="#a7866a72c705f3c8553dfb03c08e609d6">更多...</a><br /></td></tr>
+<tr class="separator:a7866a72c705f3c8553dfb03c08e609d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d4040165dec2fb6c3c3ca32c7006a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ae2d4040165dec2fb6c3c3ca32c7006a5">base_low</a></td></tr>
+<tr class="memdesc:ae2d4040165dec2fb6c3c3ca32c7006a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">base address(0:15)  <a href="#ae2d4040165dec2fb6c3c3ca32c7006a5">更多...</a><br /></td></tr>
+<tr class="separator:ae2d4040165dec2fb6c3c3ca32c7006a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783245190419263fdcf326920d67d311"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a783245190419263fdcf326920d67d311">base_middle</a></td></tr>
+<tr class="memdesc:a783245190419263fdcf326920d67d311"><td class="mdescLeft">&#160;</td><td class="mdescRight">base address(16:23)  <a href="#a783245190419263fdcf326920d67d311">更多...</a><br /></td></tr>
+<tr class="separator:a783245190419263fdcf326920d67d311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed8547d270564b018dac395b25fb10d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a7ed8547d270564b018dac395b25fb10d">access</a></td></tr>
+<tr class="memdesc:a7ed8547d270564b018dac395b25fb10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1st flags和type flags  <a href="#a7ed8547d270564b018dac395b25fb10d">更多...</a><br /></td></tr>
+<tr class="separator:a7ed8547d270564b018dac395b25fb10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386b1690505074f1b3dedd96cc7fa920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a386b1690505074f1b3dedd96cc7fa920">granularity</a></td></tr>
+<tr class="memdesc:a386b1690505074f1b3dedd96cc7fa920"><td class="mdescLeft">&#160;</td><td class="mdescRight">2nd flags和segment limit(16:19)  <a href="#a386b1690505074f1b3dedd96cc7fa920">更多...</a><br /></td></tr>
+<tr class="separator:a386b1690505074f1b3dedd96cc7fa920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0aa94a0c708eba4c0ed44948668724"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a7a0aa94a0c708eba4c0ed44948668724">base_high</a></td></tr>
+<tr class="memdesc:a7a0aa94a0c708eba4c0ed44948668724"><td class="mdescLeft">&#160;</td><td class="mdescRight">base address(24:31)  <a href="#a7a0aa94a0c708eba4c0ed44948668724">更多...</a><br /></td></tr>
+<tr class="separator:a7a0aa94a0c708eba4c0ed44948668724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a068b116656b1ad97dee1187675ee2bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a068b116656b1ad97dee1187675ee2bd4">limit</a></td></tr>
+<tr class="memdesc:a068b116656b1ad97dee1187675ee2bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDT表的大小  <a href="#a068b116656b1ad97dee1187675ee2bd4">更多...</a><br /></td></tr>
+<tr class="separator:a068b116656b1ad97dee1187675ee2bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ddfaddc648fbe1609bb4d1fbf4df23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#ad8ddfaddc648fbe1609bb4d1fbf4df23">base</a></td></tr>
+<tr class="memdesc:ad8ddfaddc648fbe1609bb4d1fbf4df23"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDT表的地址  <a href="#ad8ddfaddc648fbe1609bb4d1fbf4df23">更多...</a><br /></td></tr>
+<tr class="separator:ad8ddfaddc648fbe1609bb4d1fbf4df23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1777dfa64f2ab1504bb3ddfe48a883af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a1777dfa64f2ab1504bb3ddfe48a883af">base_lo</a></td></tr>
+<tr class="memdesc:a1777dfa64f2ab1504bb3ddfe48a883af"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断服务程序向量地址的低16位  <a href="#a1777dfa64f2ab1504bb3ddfe48a883af">更多...</a><br /></td></tr>
+<tr class="separator:a1777dfa64f2ab1504bb3ddfe48a883af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2301c09a64b9e66634500bcd518106df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a2301c09a64b9e66634500bcd518106df">sel</a></td></tr>
+<tr class="memdesc:a2301c09a64b9e66634500bcd518106df"><td class="mdescLeft">&#160;</td><td class="mdescRight">内核段选择（0x08选中代码段）  <a href="#a2301c09a64b9e66634500bcd518106df">更多...</a><br /></td></tr>
+<tr class="separator:a2301c09a64b9e66634500bcd518106df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7174de32e312a4193d7d339d828b6730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#a7174de32e312a4193d7d339d828b6730">always0</a></td></tr>
+<tr class="memdesc:a7174de32e312a4193d7d339d828b6730"><td class="mdescLeft">&#160;</td><td class="mdescRight">总是0  <a href="#a7174de32e312a4193d7d339d828b6730">更多...</a><br /></td></tr>
+<tr class="separator:a7174de32e312a4193d7d339d828b6730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa246fa433d167a7f6f8533227e40b76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aa246fa433d167a7f6f8533227e40b76e">flags</a></td></tr>
+<tr class="memdesc:aa246fa433d167a7f6f8533227e40b76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags  <a href="#aa246fa433d167a7f6f8533227e40b76e">更多...</a><br /></td></tr>
+<tr class="separator:aa246fa433d167a7f6f8533227e40b76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa395396c7b3c11c7345e729c699540b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="descriptor__tables_8h.html#aa395396c7b3c11c7345e729c699540b8">base_hi</a></td></tr>
+<tr class="memdesc:aa395396c7b3c11c7345e729c699540b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断服务程序向量地址的高16位  <a href="#aa395396c7b3c11c7345e729c699540b8">更多...</a><br /></td></tr>
+<tr class="separator:aa395396c7b3c11c7345e729c699540b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ab0b5c60e06a63669c783705278ff641e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b5c60e06a63669c783705278ff641e">&#9670;&nbsp;</a></span>gdt_entry_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgdt__entry__struct.html">gdt_entry_struct</a> <a class="el" href="descriptor__tables_8h.html#ab0b5c60e06a63669c783705278ff641e">gdt_entry_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bf3fa6f397bda8399e1afb6283b66ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf3fa6f397bda8399e1afb6283b66ca">&#9670;&nbsp;</a></span>gdt_ptr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgdt__ptr__struct.html">gdt_ptr_struct</a> <a class="el" href="descriptor__tables_8h.html#a3bf3fa6f397bda8399e1afb6283b66ca">gdt_ptr_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ad45e5b006481ff3604f7b54bd26e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad45e5b006481ff3604f7b54bd26e13">&#9670;&nbsp;</a></span>idt_entry_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structidt__entry__struct.html">idt_entry_struct</a> <a class="el" href="descriptor__tables_8h.html#a1ad45e5b006481ff3604f7b54bd26e13">idt_entry_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c173f183e148c7a8a8c1ed9214b909e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c173f183e148c7a8a8c1ed9214b909e">&#9670;&nbsp;</a></span>idt_ptr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structidt__ptr__struct.html">idt_ptr_struct</a> <a class="el" href="descriptor__tables_8h.html#a4c173f183e148c7a8a8c1ed9214b909e">idt_ptr_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a923c646cd3d9bcd6802303757a1302db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923c646cd3d9bcd6802303757a1302db">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structidt__ptr__struct.html">idt_ptr_struct</a> __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(packed)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用packed让gcc不要对齐 </p>
+
+</div>
+</div>
+<a id="a29b68b6342c3a52a54ad89ec23945472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b68b6342c3a52a54ad89ec23945472">&#9670;&nbsp;</a></span>init_descriptor_tables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_descriptor_tables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化GDT表和IDT表。 </p>
+
+</div>
+</div>
+<a id="af88eb8e98d943aa0461c01de3cb53493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88eb8e98d943aa0461c01de3cb53493">&#9670;&nbsp;</a></span>isr0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU定义的32个中断程序 </p>
+
+</div>
+</div>
+<a id="aeab0ed9ae661801c25f7dc9089c19f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab0ed9ae661801c25f7dc9089c19f72">&#9670;&nbsp;</a></span>isr1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c8cb1341cf756883a2e7dc317d5272d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8cb1341cf756883a2e7dc317d5272d">&#9670;&nbsp;</a></span>isr10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr10 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d8145cf6ee1ef7834f459ba777d323c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8145cf6ee1ef7834f459ba777d323c">&#9670;&nbsp;</a></span>isr11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr11 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00f00421039cb85f9dd9375995c784bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f00421039cb85f9dd9375995c784bd">&#9670;&nbsp;</a></span>isr12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr12 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af985dcf66872ee696e5f30d819ac16a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af985dcf66872ee696e5f30d819ac16a1">&#9670;&nbsp;</a></span>isr13()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr13 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b63eaa37c03743718870964a3429ba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b63eaa37c03743718870964a3429ba8">&#9670;&nbsp;</a></span>isr14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr14 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9160f355325318a990c106ad5c3b8954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9160f355325318a990c106ad5c3b8954">&#9670;&nbsp;</a></span>isr15()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr15 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add0980c10028b377643da169e52e5be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0980c10028b377643da169e52e5be7">&#9670;&nbsp;</a></span>isr16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr16 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7d1e81e585bc7c56b46280006402f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d1e81e585bc7c56b46280006402f9e">&#9670;&nbsp;</a></span>isr17()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr17 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae685c5ca5ed9c9c5e7d297ad8d14de49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae685c5ca5ed9c9c5e7d297ad8d14de49">&#9670;&nbsp;</a></span>isr18()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr18 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad16b5f77287df551e63d3f0c67f8f75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16b5f77287df551e63d3f0c67f8f75d">&#9670;&nbsp;</a></span>isr19()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr19 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99e457875cca040c3f7c77b61e960b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e457875cca040c3f7c77b61e960b53">&#9670;&nbsp;</a></span>isr2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a552d2aedae97d97083d3f9caf6ad59a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a552d2aedae97d97083d3f9caf6ad59a5">&#9670;&nbsp;</a></span>isr20()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr20 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af106b9a26e06abf17eebb6f7ae54f905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af106b9a26e06abf17eebb6f7ae54f905">&#9670;&nbsp;</a></span>isr21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr21 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4b6f47f27ac3b31fc426f5c2a1a669c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b6f47f27ac3b31fc426f5c2a1a669c">&#9670;&nbsp;</a></span>isr22()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr22 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a277e9cc418a637ae584c1ff6525eb2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a277e9cc418a637ae584c1ff6525eb2e1">&#9670;&nbsp;</a></span>isr23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ea113ad8536ca8311ab00d077ece7f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea113ad8536ca8311ab00d077ece7f1">&#9670;&nbsp;</a></span>isr24()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr24 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e919f327e846f72b99de088ae9b822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e919f327e846f72b99de088ae9b822">&#9670;&nbsp;</a></span>isr25()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr25 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24c118fd7e75c96d19da1bbaf87731e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c118fd7e75c96d19da1bbaf87731e4">&#9670;&nbsp;</a></span>isr26()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr26 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad97e98084cbcdc21bf03ba314dc243e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97e98084cbcdc21bf03ba314dc243e0">&#9670;&nbsp;</a></span>isr27()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr27 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2a5fe4d3cf67be0c67db612aa757c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a5fe4d3cf67be0c67db612aa757c5f">&#9670;&nbsp;</a></span>isr28()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr28 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cce4d55d6a199607cd3a9e2a33241b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cce4d55d6a199607cd3a9e2a33241b2">&#9670;&nbsp;</a></span>isr29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ef268d2c16a7b318356451a05fd507b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef268d2c16a7b318356451a05fd507b">&#9670;&nbsp;</a></span>isr3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af868664393aedd51c04e3ddd48b8f84f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af868664393aedd51c04e3ddd48b8f84f">&#9670;&nbsp;</a></span>isr30()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr30 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4ae10cea59f9bb2f79c13b8036d81f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ae10cea59f9bb2f79c13b8036d81f1">&#9670;&nbsp;</a></span>isr31()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr31 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09af768d636144aaeaddd76c92a0a2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09af768d636144aaeaddd76c92a0a2f5">&#9670;&nbsp;</a></span>isr4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa91d821a4bcafb44933d92945727b0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91d821a4bcafb44933d92945727b0df">&#9670;&nbsp;</a></span>isr5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr5 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fadb95f34937b1ded02c4171b4920ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fadb95f34937b1ded02c4171b4920ba">&#9670;&nbsp;</a></span>isr6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr6 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eb6ec30db7077fb1c9c9d926a0fc407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb6ec30db7077fb1c9c9d926a0fc407">&#9670;&nbsp;</a></span>isr7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr7 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86bc69345a3bb409665dbadb77a9d393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bc69345a3bb409665dbadb77a9d393">&#9670;&nbsp;</a></span>isr8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr8 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacb7c8490cbd623a3a2bf933ffedd131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb7c8490cbd623a3a2bf933ffedd131">&#9670;&nbsp;</a></span>isr9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr9 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a7ed8547d270564b018dac395b25fb10d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed8547d270564b018dac395b25fb10d">&#9670;&nbsp;</a></span>access</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> access</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1st flags和type flags </p>
+
+</div>
+</div>
+<a id="a7174de32e312a4193d7d339d828b6730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7174de32e312a4193d7d339d828b6730">&#9670;&nbsp;</a></span>always0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> always0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>总是0 </p>
+
+</div>
+</div>
+<a id="ad8ddfaddc648fbe1609bb4d1fbf4df23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ddfaddc648fbe1609bb4d1fbf4df23">&#9670;&nbsp;</a></span>base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> base</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GDT表的地址 </p>
+<p>IDT表地址 </p>
+
+</div>
+</div>
+<a id="aa395396c7b3c11c7345e729c699540b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa395396c7b3c11c7345e729c699540b8">&#9670;&nbsp;</a></span>base_hi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> base_hi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中断服务程序向量地址的高16位 </p>
+
+</div>
+</div>
+<a id="a7a0aa94a0c708eba4c0ed44948668724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0aa94a0c708eba4c0ed44948668724">&#9670;&nbsp;</a></span>base_high</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> base_high</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>base address(24:31) </p>
+
+</div>
+</div>
+<a id="a1777dfa64f2ab1504bb3ddfe48a883af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1777dfa64f2ab1504bb3ddfe48a883af">&#9670;&nbsp;</a></span>base_lo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> base_lo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中断服务程序向量地址的低16位 </p>
+
+</div>
+</div>
+<a id="ae2d4040165dec2fb6c3c3ca32c7006a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d4040165dec2fb6c3c3ca32c7006a5">&#9670;&nbsp;</a></span>base_low</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> base_low</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>base address(0:15) </p>
+
+</div>
+</div>
+<a id="a783245190419263fdcf326920d67d311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783245190419263fdcf326920d67d311">&#9670;&nbsp;</a></span>base_middle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> base_middle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>base address(16:23) </p>
+
+</div>
+</div>
+<a id="aa246fa433d167a7f6f8533227e40b76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa246fa433d167a7f6f8533227e40b76e">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flags </p>
+
+</div>
+</div>
+<a id="a386b1690505074f1b3dedd96cc7fa920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386b1690505074f1b3dedd96cc7fa920">&#9670;&nbsp;</a></span>granularity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> granularity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2nd flags和segment limit(16:19) </p>
+
+</div>
+</div>
+<a id="a068b116656b1ad97dee1187675ee2bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068b116656b1ad97dee1187675ee2bd4">&#9670;&nbsp;</a></span>limit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> limit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GDT表的大小 </p>
+<p>IDT表大小 </p>
+
+</div>
+</div>
+<a id="a7866a72c705f3c8553dfb03c08e609d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7866a72c705f3c8553dfb03c08e609d6">&#9670;&nbsp;</a></span>limit_low</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> limit_low</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>segment limit(0:15) </p>
+
+</div>
+</div>
+<a id="a2301c09a64b9e66634500bcd518106df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2301c09a64b9e66634500bcd518106df">&#9670;&nbsp;</a></span>sel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> sel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内核段选择（0x08选中代码段） </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

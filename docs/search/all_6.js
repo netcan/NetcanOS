@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['left',['LEFT',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ecadb45120aafd37a973140edee24708065',1,'stdio.c']]],
-  ['lower',['LOWER',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ecaa1017e9b343135a54a98b6f479354d16',1,'stdio.c']]]
+  ['flag',['FLAG',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ec',1,'stdio.c']]],
+  ['flags',['flags',['../structidt__entry__struct.html#a6060c36efd80252d3d18dd8f4ca7dbe6',1,'idt_entry_struct::flags()'],['../descriptor__tables_8h.html#aa246fa433d167a7f6f8533227e40b76e',1,'flags():&#160;descriptor_tables.h']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ptrdiff_5ft',['ptrdiff_t',['../stddef_8h.html#afbe679a40a36da5983ebc5b39754c065',1,'stddef.h']]]
+  ['gdt_5fentry_5ft',['gdt_entry_t',['../descriptor__tables_8h.html#ab0b5c60e06a63669c783705278ff641e',1,'descriptor_tables.h']]],
+  ['gdt_5fptr_5ft',['gdt_ptr_t',['../descriptor__tables_8h.html#a3bf3fa6f397bda8399e1afb6283b66ca',1,'descriptor_tables.h']]]
 ];
