@@ -1,2 +1,2 @@
-add-symbol-file kernel.elf 0x1000
+add-symbol-file kernel/kernel.elf 0x1000
 target remote | qemu-system-i386 -S -gdb stdio -fda NetcanOS.img

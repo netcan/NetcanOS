@@ -1,6 +1,7 @@
-CC = i386-elf-gcc-8.1.0
+CC = i386-elf-gcc
 LD = i386-elf-ld
 GDB = i386-elf-gdb
+OBJCOPY = i386-elf-objcopy
 NASM = nasm
 CFLAGS = -g -m32 -ffreestanding -c -Ikernel -Idrivers -Ilibc
 
@@ -14,8 +15,8 @@ all: NetcanOS.img
 NetcanOS.img: boot/bootloader.bin kernel/kernel.bin
 	cat $^ > $@
 
-kernel/kernel.bin: kernel/kernel_entry.o $(OBJS)
-	$(LD) -Ttext 0x1000 --oformat binary $^ -o $@
+kernel/kernel.bin: kernel/kernel.elf
+	$(OBJCOPY) -O binary $< $@
 
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) $< -o $@
@@ -27,17 +28,17 @@ kernel/kernel.bin: kernel/kernel_entry.o $(OBJS)
 	$(NASM) $< -f bin -I boot/ -o $@
 
 # 调试用
-kernel.elf: kernel/kernel_entry.o ${OBJS}
+kernel/kernel.elf: kernel/kernel_entry.o $(OBJS)
 	$(LD) -o $@ -Ttext 0x1000 $^
 
 run: NetcanOS.img
 	#bochs
 	qemu-system-i386 -fda NetcanOS.img
 
-debug: NetcanOS.img kernel.elf kernel.gdb
+debug: NetcanOS.img kernel/kernel.elf kernel.gdb
 	$(GDB) -x kernel.gdb
 
 clean:
 	rm -rf NetcanOS.img
-	rm -rf kernel/*.bin
-	rm -rf kernel/*.o boot/*.bin
+	rm -rf kernel/*.bin kernel/*.elf
+	rm -rf kernel/*.o boot/*.bin drivers/*.o libc/*.o

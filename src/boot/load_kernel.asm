@@ -7,7 +7,7 @@ load_kernel:
 	call print_string
 
 	mov bx, KERNEL_OFFSET
-	mov dh, 0x10	; 读取16块扇区, 16 * 512B = 8KB
+	mov dh, 0x30	;  需要注意读取的扇区数！过小导致加载不完全。
 	mov dl, [BOOT_DRIVE]
 	call disk_load
 	ret
