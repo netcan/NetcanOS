@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reg_5fscreen_5fctrl',['REG_SCREEN_CTRL',['../video__terminal_8h.html#a5696c86476f735503ffc1b1b3ed0f4e5',1,'video_terminal.h']]],
-  ['reg_5fscreen_5fdata',['REG_SCREEN_DATA',['../video__terminal_8h.html#a98658fb49659e8bc1a1fe0d51eab1d0c',1,'video_terminal.h']]]
+  ['main',['main',['../kernel_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'kernel.c']]],
+  ['max_5fcol',['MAX_COL',['../video__terminal_8h.html#a97e80440b5a5ec2ffc172dead9f8d2ec',1,'video_terminal.h']]],
+  ['max_5frow',['MAX_ROW',['../video__terminal_8h.html#ad5a8dfc9e1a303abf98b2705f3581afb',1,'video_terminal.h']]],
+  ['memcpy',['memcpy',['../string_8c.html#a82c26cd350df88414f825bca40183ec2',1,'memcpy(void *dest, const void *src, size_t count):&#160;string.c'],['../string_8h.html#a82c26cd350df88414f825bca40183ec2',1,'memcpy(void *dest, const void *src, size_t count):&#160;string.c']]],
+  ['memset',['memset',['../string_8c.html#ace6ee45c30e71865e6eb635200379db9',1,'memset(void *s, int c, size_t n):&#160;string.c'],['../string_8h.html#ace6ee45c30e71865e6eb635200379db9',1,'memset(void *s, int c, size_t n):&#160;string.c']]]
 ];

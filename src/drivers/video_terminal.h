@@ -24,6 +24,8 @@
 #define REG_SCREEN_CTRL 0x3d4 //!< 屏幕控制端口
 #define REG_SCREEN_DATA 0x3d5 //!< 屏幕数据端口 @see REG_SCREEN_CTRL
 
+#define TABSIZE 8 //!< TAB制表符的长度
+
 extern u8 *VRAM;
 void clear_vt(void);
 

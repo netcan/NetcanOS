@@ -17,6 +17,6 @@ typedef signed char s8;
 
 typedef unsigned int size_t;
 typedef int ptrdiff_t;
-#define NULL ((void*)0)
+#define NULL (0)
 #endif
 

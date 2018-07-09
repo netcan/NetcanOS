@@ -8,5 +8,5 @@ var searchData=
   ['video_5fterminal_2eh',['video_terminal.h',['../video__terminal_8h.html',1,'']]],
   ['vram',['VRAM',['../video__terminal_8c.html#af00fc1a5c365b9c0370cd67d26eac68f',1,'VRAM():&#160;video_terminal.c'],['../video__terminal_8h.html#af00fc1a5c365b9c0370cd67d26eac68f',1,'VRAM():&#160;video_terminal.c']]],
   ['vram_5faddress',['VRAM_ADDRESS',['../video__terminal_8h.html#a92244f61bbcf52e69b00a23525fddc28',1,'video_terminal.h']]],
-  ['vsprintf',['vsprintf',['../stdio_8h.html#ac556ff5283a45e1f41c7ef7edc72d225',1,'stdio.h']]]
+  ['vsprintf',['vsprintf',['../stdio_8c.html#a760c2a9adc3e177ae208cf07c1424758',1,'vsprintf(char *str, const char *fmt, va_list args):&#160;stdio.c'],['../stdio_8h.html#ac556ff5283a45e1f41c7ef7edc72d225',1,'vsprintf(char *str, const char *fmt, va_list arg):&#160;stdio.c']]]
 ];

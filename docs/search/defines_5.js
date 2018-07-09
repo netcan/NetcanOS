@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_5fon_5fblack',['WHITE_ON_BLACK',['../video__terminal_8h.html#a8f2c9cf0fdab9bec4e9cf716bb9f561d',1,'video_terminal.h']]]
+  ['tabsize',['TABSIZE',['../video__terminal_8h.html#a6511bfd47ae935d09420c07d0ae15af9',1,'video_terminal.h']]]
 ];

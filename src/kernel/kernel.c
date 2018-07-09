@@ -7,10 +7,16 @@
  ************************************************************************/
 
 #include <video_terminal.h>
+#include <stdio.h>
 
 /**
  * 内核入口。
  */
 void main() {
-	print("Hello World! From Kernel.c");
+	printf("Hello World! From NetcanOS\n");
+	for(int i = 1; i <= 9; ++i) {
+		for(int j = 1; j <= i; ++j)
+			printf("%dx%d=%2d\t", i, j, i * j);
+		printf("\n");
+	}
 }

@@ -81,8 +81,49 @@ $(function() {
 <tr class="memitem:ac556ff5283a45e1f41c7ef7edc72d225"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdio_8h.html#ac556ff5283a45e1f41c7ef7edc72d225">vsprintf</a> (char *str, const char *fmt, <a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a> arg)</td></tr>
 <tr class="memdesc:ac556ff5283a45e1f41c7ef7edc72d225"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化输出字符串。  <a href="#ac556ff5283a45e1f41c7ef7edc72d225">更多...</a><br /></td></tr>
 <tr class="separator:ac556ff5283a45e1f41c7ef7edc72d225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f3d956bb2ba20b5059e9e25484a47f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdio_8h.html#a55f3d956bb2ba20b5059e9e25484a47f">printf</a> (const char *fmt,...)</td></tr>
+<tr class="memdesc:a55f3d956bb2ba20b5059e9e25484a47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化输出。  <a href="#a55f3d956bb2ba20b5059e9e25484a47f">更多...</a><br /></td></tr>
+<tr class="separator:a55f3d956bb2ba20b5059e9e25484a47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
+<a id="a55f3d956bb2ba20b5059e9e25484a47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f3d956bb2ba20b5059e9e25484a47f">&#9670;&nbsp;</a></span>printf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int printf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>格式化输出。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>格式 </td></tr>
+    <tr><td class="paramname">...</td><td>参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功就返回输出字符的字符个数，否则返回负数 </dd></dl>
+
+</div>
+</div>
 <a id="ac556ff5283a45e1f41c7ef7edc72d225"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac556ff5283a45e1f41c7ef7edc72d225">&#9670;&nbsp;</a></span>vsprintf()</h2>
 
@@ -105,7 +146,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a>&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -120,7 +161,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">str</td><td>输出字符串缓冲区 </td></tr>
     <tr><td class="paramname">fmt</td><td>格式 </td></tr>
-    <tr><td class="paramname">arg</td><td>参数列表 </td></tr>
+    <tr><td class="paramname">args</td><td>参数列表 </td></tr>
   </table>
   </dd>
 </dl>

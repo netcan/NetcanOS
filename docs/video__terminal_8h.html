@@ -97,6 +97,9 @@ $(function() {
 <tr class="memitem:a98658fb49659e8bc1a1fe0d51eab1d0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video__terminal_8h.html#a98658fb49659e8bc1a1fe0d51eab1d0c">REG_SCREEN_DATA</a>&#160;&#160;&#160;0x3d5</td></tr>
 <tr class="memdesc:a98658fb49659e8bc1a1fe0d51eab1d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">屏幕数据端口  <a href="#a98658fb49659e8bc1a1fe0d51eab1d0c">更多...</a><br /></td></tr>
 <tr class="separator:a98658fb49659e8bc1a1fe0d51eab1d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6511bfd47ae935d09420c07d0ae15af9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video__terminal_8h.html#a6511bfd47ae935d09420c07d0ae15af9">TABSIZE</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a6511bfd47ae935d09420c07d0ae15af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">TAB制表符的长度  <a href="#a6511bfd47ae935d09420c07d0ae15af9">更多...</a><br /></td></tr>
+<tr class="separator:a6511bfd47ae935d09420c07d0ae15af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
@@ -104,7 +107,7 @@ $(function() {
 <tr class="memdesc:a871d397e5583c6aca1bcc33a9d8b331b"><td class="mdescLeft">&#160;</td><td class="mdescRight">清屏。  <a href="#a871d397e5583c6aca1bcc33a9d8b331b">更多...</a><br /></td></tr>
 <tr class="separator:a871d397e5583c6aca1bcc33a9d8b331b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564571b01dda7fdd492aadff263ee9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video__terminal_8h.html#a564571b01dda7fdd492aadff263ee9e0">print_char</a> (char character, int row, int col, char attribute_byte)</td></tr>
-<tr class="memdesc:a564571b01dda7fdd492aadff263ee9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">在第row行，第col列打印属性为attribute_byte的字符character。  <a href="#a564571b01dda7fdd492aadff263ee9e0">更多...</a><br /></td></tr>
+<tr class="memdesc:a564571b01dda7fdd492aadff263ee9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">在第row行，第col列打印属性为attribute_byte的字符character，打印函数中的最底层。  <a href="#a564571b01dda7fdd492aadff263ee9e0">更多...</a><br /></td></tr>
 <tr class="separator:a564571b01dda7fdd492aadff263ee9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05910f15be330da501c22cd5e8a0093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video__terminal_8h.html#ab05910f15be330da501c22cd5e8a0093">print_at</a> (const char *string, int row, int col)</td></tr>
 <tr class="memdesc:ab05910f15be330da501c22cd5e8a0093"><td class="mdescLeft">&#160;</td><td class="mdescRight">在第row行，第col列打印字符串。  <a href="#ab05910f15be330da501c22cd5e8a0093">更多...</a><br /></td></tr>
@@ -184,6 +187,22 @@ $(function() {
 
 <p>屏幕数据端口 </p>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="video__terminal_8h.html#a5696c86476f735503ffc1b1b3ed0f4e5" title="屏幕设备的IO端口。 ">REG_SCREEN_CTRL</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6511bfd47ae935d09420c07d0ae15af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6511bfd47ae935d09420c07d0ae15af9">&#9670;&nbsp;</a></span>TABSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TABSIZE&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TAB制表符的长度 </p>
 
 </div>
 </div>
@@ -348,7 +367,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>在第row行，第col列打印属性为attribute_byte的字符character。 </p>
+<p>在第row行，第col列打印属性为attribute_byte的字符character，打印函数中的最底层。 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">character</td><td>8位ASCII字符 </td></tr>

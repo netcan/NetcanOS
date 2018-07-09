@@ -31,3 +31,13 @@ void *memset(void *s, int c, size_t n) {
     while(n--) *sp++ = (u8)c;
     return s;
 }
+
+/** 返回字符串str的长度
+ * @param str 字符串
+ * @return 长度
+ */
+size_t strlen(const char *str) {
+	size_t len = 0;
+	for(; str[len]; ++len);
+	return len;
+}

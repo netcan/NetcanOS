@@ -60,7 +60,7 @@ static int handle_vt_scrolling(int offset) {
 	return offset;
 }
 
-/** 在第row行，第col列打印属性为attribute_byte的字符character。
+/** 在第row行，第col列打印属性为attribute_byte的字符character，打印函数中的最底层。
  * @param character 8位ASCII字符
  * @param row 行数
  * @param col 列数
@@ -76,15 +76,20 @@ void print_char(char character, int row, int col, char attribute_byte) {
 	}
 	else offset = get_vt_cursor();
 
-	if(character == '\n') { // 换行
-		int row = offset / MAX_COL / 2;
-		offset = get_vt_offset(row, MAX_COL - 1);
-	} else {
-		VRAM[offset] = character;
-		VRAM[offset + 1] = attribute_byte;
+	switch(character) {
+		case '\n':
+			offset = get_vt_offset(offset / MAX_COL / 2 + 1, 0);
+			break;
+		case '\t':
+			offset += TABSIZE - offset % TABSIZE;
+			break;
+		default:
+			VRAM[offset] = character;
+			VRAM[offset + 1] = attribute_byte;
+			offset += 2;
+			break;
 	}
 
-	offset += 2;
 	offset = handle_vt_scrolling(offset);
 	set_vt_cursor(offset);
 }

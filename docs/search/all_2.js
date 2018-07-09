@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['io_2ec',['io.c',['../io_8c.html',1,'']]],
-  ['io_2eh',['io.h',['../io_8h.html',1,'']]]
+  ['clear_5fvt',['clear_vt',['../video__terminal_8c.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c'],['../video__terminal_8h.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c']]]
 ];
