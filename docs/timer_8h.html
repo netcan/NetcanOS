@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/cpu/timer.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2c61f424fd391396db977702a2beee9a.html">cpu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">timer.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="io_8h_source.html">io.h</a>&gt;</code><br />
+</div>
+<p><a href="timer_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ade666a601e12206e42879a7b8364133d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#ade666a601e12206e42879a7b8364133d">TIMER_CHANNEL_DATA_0</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="memdesc:ade666a601e12206e42879a7b8364133d"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器，产生定时中断。 频率范围：18.2 Hz ~ 1193180 Hz  <a href="#ade666a601e12206e42879a7b8364133d">更多...</a><br /></td></tr>
+<tr class="separator:ade666a601e12206e42879a7b8364133d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b57f98a46d0898e14ecc727e49cd6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#ab0b57f98a46d0898e14ecc727e49cd6b">TIMER_CHANNEL_DATA_1</a>&#160;&#160;&#160;0x41</td></tr>
+<tr class="memdesc:ab0b57f98a46d0898e14ecc727e49cd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器信道数据端口1，已废弃，用于控制DRAM的刷新率  <a href="#ab0b57f98a46d0898e14ecc727e49cd6b">更多...</a><br /></td></tr>
+<tr class="separator:ab0b57f98a46d0898e14ecc727e49cd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08b2a8e5707dfdcb491e57c68885516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#ac08b2a8e5707dfdcb491e57c68885516">TIMER_CHANNEL_DATA_2</a>&#160;&#160;&#160;0x42</td></tr>
+<tr class="memdesc:ac08b2a8e5707dfdcb491e57c68885516"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器信道数据端口2，用于控制扬声器频率  <a href="#ac08b2a8e5707dfdcb491e57c68885516">更多...</a><br /></td></tr>
+<tr class="separator:ac08b2a8e5707dfdcb491e57c68885516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5335b7aaff72150f492779da7bc962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#a9e5335b7aaff72150f492779da7bc962">TIMER_CONTROL</a>&#160;&#160;&#160;0x43</td></tr>
+<tr class="memdesc:a9e5335b7aaff72150f492779da7bc962"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器控制端口  <a href="#a9e5335b7aaff72150f492779da7bc962">更多...</a><br /></td></tr>
+<tr class="separator:a9e5335b7aaff72150f492779da7bc962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1abe07c4d92ce70925be770153bb5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#a9f1abe07c4d92ce70925be770153bb5d">MAX_FREQ</a>&#160;&#160;&#160;1193180</td></tr>
+<tr class="memdesc:a9f1abe07c4d92ce70925be770153bb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器最大值  <a href="#a9f1abe07c4d92ce70925be770153bb5d">更多...</a><br /></td></tr>
+<tr class="separator:a9f1abe07c4d92ce70925be770153bb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a82d235a957a47f7ae7bcb5accc8f0b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#a82d235a957a47f7ae7bcb5accc8f0b75">init_timer</a> (<a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> freq)</td></tr>
+<tr class="separator:a82d235a957a47f7ae7bcb5accc8f0b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#ae5c2828cca3b6aaf6ed0517ad5f1a45b">tick</a></td></tr>
+<tr class="memdesc:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器中断次数  <a href="#ae5c2828cca3b6aaf6ed0517ad5f1a45b">更多...</a><br /></td></tr>
+<tr class="separator:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a9f1abe07c4d92ce70925be770153bb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1abe07c4d92ce70925be770153bb5d">&#9670;&nbsp;</a></span>MAX_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_FREQ&#160;&#160;&#160;1193180</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器最大值 </p>
+
+</div>
+</div>
+<a id="ade666a601e12206e42879a7b8364133d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade666a601e12206e42879a7b8364133d">&#9670;&nbsp;</a></span>TIMER_CHANNEL_DATA_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMER_CHANNEL_DATA_0&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器，产生定时中断。 频率范围：18.2 Hz ~ 1193180 Hz </p>
+<p>定时器信道数据端口0，连接中断IRQ0 </p>
+
+</div>
+</div>
+<a id="ab0b57f98a46d0898e14ecc727e49cd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b57f98a46d0898e14ecc727e49cd6b">&#9670;&nbsp;</a></span>TIMER_CHANNEL_DATA_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMER_CHANNEL_DATA_1&#160;&#160;&#160;0x41</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器信道数据端口1，已废弃，用于控制DRAM的刷新率 </p>
+
+</div>
+</div>
+<a id="ac08b2a8e5707dfdcb491e57c68885516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08b2a8e5707dfdcb491e57c68885516">&#9670;&nbsp;</a></span>TIMER_CHANNEL_DATA_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMER_CHANNEL_DATA_2&#160;&#160;&#160;0x42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器信道数据端口2，用于控制扬声器频率 </p>
+
+</div>
+</div>
+<a id="a9e5335b7aaff72150f492779da7bc962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5335b7aaff72150f492779da7bc962">&#9670;&nbsp;</a></span>TIMER_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMER_CONTROL&#160;&#160;&#160;0x43</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器控制端口 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a82d235a957a47f7ae7bcb5accc8f0b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d235a957a47f7ae7bcb5accc8f0b75">&#9670;&nbsp;</a></span>init_timer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_timer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td>
+          <td class="paramname"><em>freq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ae5c2828cca3b6aaf6ed0517ad5f1a45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c2828cca3b6aaf6ed0517ad5f1a45b">&#9670;&nbsp;</a></span>tick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> tick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器中断次数 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

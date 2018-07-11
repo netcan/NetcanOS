@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['va_5farg',['va_arg',['../stdarg_8h.html#afeb46f660b756eb161fb4aa8969925c7',1,'stdarg.h']]],
-  ['va_5fend',['va_end',['../stdarg_8h.html#acd9b3b9085ec072324c5fdac2b40304e',1,'stdarg.h']]],
-  ['va_5fstart',['va_start',['../stdarg_8h.html#a8754a3fcf3dbe468869b0311fb5394c5',1,'stdarg.h']]],
-  ['vram_5faddress',['VRAM_ADDRESS',['../video__terminal_8h.html#a92244f61bbcf52e69b00a23525fddc28',1,'video_terminal.h']]]
+  ['tabsize',['TABSIZE',['../video__terminal_8h.html#a6511bfd47ae935d09420c07d0ae15af9',1,'video_terminal.h']]],
+  ['timer_5fchannel_5fdata_5f0',['TIMER_CHANNEL_DATA_0',['../timer_8h.html#ade666a601e12206e42879a7b8364133d',1,'timer.h']]],
+  ['timer_5fchannel_5fdata_5f1',['TIMER_CHANNEL_DATA_1',['../timer_8h.html#ab0b57f98a46d0898e14ecc727e49cd6b',1,'timer.h']]],
+  ['timer_5fchannel_5fdata_5f2',['TIMER_CHANNEL_DATA_2',['../timer_8h.html#ac08b2a8e5707dfdcb491e57c68885516',1,'timer.h']]],
+  ['timer_5fcontrol',['TIMER_CONTROL',['../timer_8h.html#a9e5335b7aaff72150f492779da7bc962',1,'timer.h']]]
 ];

@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/cpu/int_handler.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2c61f424fd391396db977702a2beee9a.html">cpu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">int_handler.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="int__handler_8h_source.html">int_handler.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="descriptor__tables_8h_source.html">descriptor_tables.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdio_8h_source.html">stdio.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8cf1456cc8821e46127c8c8e5984529a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a8cf1456cc8821e46127c8c8e5984529a">register_int_handler</a> (<a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> int_no, <a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> handler)</td></tr>
+<tr class="memdesc:a8cf1456cc8821e46127c8c8e5984529a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册中断程序  int_no 中断号  handler 中断处理程序  <a href="#a8cf1456cc8821e46127c8c8e5984529a">更多...</a><br /></td></tr>
+<tr class="separator:a8cf1456cc8821e46127c8c8e5984529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700e3ca056bf69296370f504f2cb6cc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a700e3ca056bf69296370f504f2cb6cc8">isr_handler</a> (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a> regs)</td></tr>
+<tr class="memdesc:a700e3ca056bf69296370f504f2cb6cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号&lt;32），处理系统中断system error  <a href="#a700e3ca056bf69296370f504f2cb6cc8">更多...</a><br /></td></tr>
+<tr class="separator:a700e3ca056bf69296370f504f2cb6cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3d6c92004ced19d9683425eafd03d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a4f3d6c92004ced19d9683425eafd03d6">irq_handler</a> (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a> regs)</td></tr>
+<tr class="memdesc:a4f3d6c92004ced19d9683425eafd03d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号32-47）  <a href="#a4f3d6c92004ced19d9683425eafd03d6">更多...</a><br /></td></tr>
+<tr class="separator:a4f3d6c92004ced19d9683425eafd03d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aeea7e5229feacff3af9e947a863f0c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#aeea7e5229feacff3af9e947a863f0c01">int_handlers</a> [0xff]</td></tr>
+<tr class="separator:aeea7e5229feacff3af9e947a863f0c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a4f3d6c92004ced19d9683425eafd03d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f3d6c92004ced19d9683425eafd03d6">&#9670;&nbsp;</a></span>irq_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void irq_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a>&#160;</td>
+          <td class="paramname"><em>regs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中断处理程序（中断号32-47） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regs</td><td>寄存器信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a700e3ca056bf69296370f504f2cb6cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700e3ca056bf69296370f504f2cb6cc8">&#9670;&nbsp;</a></span>isr_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a>&#160;</td>
+          <td class="paramname"><em>regs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中断处理程序（中断号&lt;32），处理系统中断system error </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regs</td><td>寄存器信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cf1456cc8821e46127c8c8e5984529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf1456cc8821e46127c8c8e5984529a">&#9670;&nbsp;</a></span>register_int_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void register_int_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>int_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册中断程序  int_no 中断号  handler 中断处理程序 </p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aeea7e5229feacff3af9e947a863f0c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea7e5229feacff3af9e947a863f0c01">&#9670;&nbsp;</a></span>int_handlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> int_handlers[0xff]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

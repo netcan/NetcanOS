@@ -8,6 +8,7 @@
 
 #include <video_terminal.h>
 #include <descriptor_tables.h>
+#include <timer.h>
 #include <stdio.h>
 
 /**
@@ -15,6 +16,7 @@
  */
 void main() {
 	init_descriptor_tables();
+	init_timer(100); // 100 Hz，每10ms中断一次
 
 	printf("Hello World! From NetcanOS\n");
 	for(int i = 1; i <= 9; ++i) {
@@ -23,5 +25,9 @@ void main() {
 		printf("\n");
 	}
 	asm volatile("int $0x10");
-	asm volatile("int $0x0f");
+	asm volatile("int $0x21");
+	asm volatile("int $0x21");
+	asm volatile("int $0x21");
+	asm volatile("int $0x21");
+	asm volatile("int $0x21");
 }

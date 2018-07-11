@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NetcanOS: src/kernel/kernel.c 文件参考</title>
+<title>NetcanOS: src/cpu/timer.c 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,44 +62,65 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cbd7f246bdf7dc0a50281a272327e6ed.html">kernel</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2c61f424fd391396db977702a2beee9a.html">cpu</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">函数</a>  </div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
   <div class="headertitle">
-<div class="title">kernel.c 文件参考</div>  </div>
+<div class="title">timer.c 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="video__terminal_8h_source.html">video_terminal.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="descriptor__tables_8h_source.html">descriptor_tables.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="timer_8h_source.html">timer.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="timer_8h_source.html">timer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="int__handler_8h_source.html">int_handler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="stdio_8h_source.html">stdio.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:acdef7a1fd863a6d3770c1268cb06add3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a> ()</td></tr>
-<tr class="memdesc:acdef7a1fd863a6d3770c1268cb06add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">内核入口。  <a href="#acdef7a1fd863a6d3770c1268cb06add3">更多...</a><br /></td></tr>
-<tr class="separator:acdef7a1fd863a6d3770c1268cb06add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d235a957a47f7ae7bcb5accc8f0b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a82d235a957a47f7ae7bcb5accc8f0b75">init_timer</a> (<a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> freq)</td></tr>
+<tr class="separator:a82d235a957a47f7ae7bcb5accc8f0b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#ae5c2828cca3b6aaf6ed0517ad5f1a45b">tick</a> = 0</td></tr>
+<tr class="memdesc:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器中断次数  <a href="#ae5c2828cca3b6aaf6ed0517ad5f1a45b">更多...</a><br /></td></tr>
+<tr class="separator:ae5c2828cca3b6aaf6ed0517ad5f1a45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="acdef7a1fd863a6d3770c1268cb06add3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdef7a1fd863a6d3770c1268cb06add3">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a82d235a957a47f7ae7bcb5accc8f0b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d235a957a47f7ae7bcb5accc8f0b75">&#9670;&nbsp;</a></span>init_timer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void main </td>
+          <td class="memname">void init_timer </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td>
+          <td class="paramname"><em>freq</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>内核入口。 </p>
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ae5c2828cca3b6aaf6ed0517ad5f1a45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c2828cca3b6aaf6ed0517ad5f1a45b">&#9670;&nbsp;</a></span>tick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> tick = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器中断次数 </p>
 
 </div>
 </div>

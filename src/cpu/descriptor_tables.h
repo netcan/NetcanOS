@@ -9,6 +9,12 @@
 #include <io.h>
 #ifndef DT_H
 #define DT_H
+#define PIC_MASTER_CONTROL 0x20 //!< master pic的控制端口
+#define PIC_MASTER_DATA 0x21	//!< master pic的数据端口
+#define PIC_SLAVE_CONTROL 0xa0	//!< slave pic的控制端口
+#define PIC_SLAVE_DATA 0xa1		//!< slave pic的数据端口
+#define PIC_EOI 0x20	//!< 中断结束信息
+
 /** GDT表结构。
 * 1st flags: (present) (privilege) (descriptor type)
 * type flags: (code) (conforming) (readable) (accessed)
@@ -53,7 +59,7 @@ typedef struct idt_ptr_struct idt_ptr_t;
 
 void init_descriptor_tables();
 
-/** CPU定义的32个中断程序
+/** CPU定义的32个system error中断程序
  */
 extern void isr0();
 extern void isr1();
@@ -87,5 +93,25 @@ extern void isr28();
 extern void isr29();
 extern void isr30();
 extern void isr31();
+
+/** 32-47号中断
+ */
+extern void irq0();
+extern void irq1();
+extern void irq2();
+extern void irq3();
+extern void irq4();
+extern void irq5();
+extern void irq6();
+extern void irq7();
+extern void irq8();
+extern void irq9();
+extern void irq10();
+extern void irq11();
+extern void irq12();
+extern void irq13();
+extern void irq14();
+extern void irq15();
+
 
 #endif

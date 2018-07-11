@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['strlen',['strlen',['../string_8c.html#a008e171a518fe0e0352f31b245e03875',1,'strlen(const char *str):&#160;string.c'],['../string_8h.html#ae6c8de953239811a34eeeab09458e55e',1,'strlen(const char *str):&#160;string.c']]]
+  ['register_5fint_5fhandler',['register_int_handler',['../int__handler_8c.html#a8cf1456cc8821e46127c8c8e5984529a',1,'register_int_handler(u8 int_no, int_handler_t handler):&#160;int_handler.c'],['../int__handler_8h.html#a8cf1456cc8821e46127c8c8e5984529a',1,'register_int_handler(u8 int_no, int_handler_t handler):&#160;int_handler.c']]]
 ];

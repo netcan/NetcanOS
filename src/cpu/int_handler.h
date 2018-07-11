@@ -1,5 +1,5 @@
 /*************************************************************************
-	> File Name: kernel/isr.h
+	> File Name: kernel/init_handler.h
 	  > Author: Netcan
 	  > Blog: http://www.netcan666.com
 	  > Mail: 1469709759@qq.com
@@ -7,8 +7,25 @@
  ************************************************************************/
 
 #include <io.h>
-#ifndef ISR_H
-#define ISR_H
+#ifndef INIT_HANDLER_H
+#define INIT_HANDLER_H
+#define IRQ0 32
+#define IRQ1 33
+#define IRQ2 34
+#define IRQ3 35
+#define IRQ4 36
+#define IRQ5 37
+#define IRQ6 38
+#define IRQ7 39
+#define IRQ8 40
+#define IRQ9 41
+#define IRQ10 42
+#define IRQ11 43
+#define IRQ12 44
+#define IRQ13 45
+#define IRQ14 46
+#define IRQ15 47
+
 typedef struct registers {
 	u32 ds;                  // 数据段选择
 	u32 edi, esi, ebp, esp, ebx, edx, ecx, eax; // 通用寄存器
@@ -18,4 +35,7 @@ typedef struct registers {
 
 void isr_handler(registers_t regs);
 
+typedef void (*int_handler_t)(registers_t);
+extern int_handler_t int_handlers[0xff];
+void register_int_handler(u8 int_no, int_handler_t handler);
 #endif

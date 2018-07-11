@@ -11,6 +11,7 @@ flags = [ '-Wall',
         '-ffreestanding',
         '-Ikernel',
         '-Ilibc',
+        '-Icpu',
         '-Idrivers',
         ]
 

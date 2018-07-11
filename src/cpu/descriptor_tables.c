@@ -7,6 +7,7 @@
  ************************************************************************/
 
 #include <descriptor_tables.h>
+#include <io.h>
 #include <string.h>
 
 extern void gdt_flush(u32 gdt_ptr);
@@ -74,8 +75,10 @@ static void init_idt() {
 	idt_ptr.limit = sizeof(idt_entries) - 1;
 	idt_ptr.base = (u32)&idt_entries;
 
+	// 初始化IDT表
 	memset(&idt_entries, 0, sizeof(idt_entries));
 
+	// system error中断(中断号<32)
 	idt_set_gate(0, (u32)isr0, 0x08, 0x8E);
 	idt_set_gate(1, (u32)isr1, 0x08, 0x8E);
 	idt_set_gate(2, (u32)isr2, 0x08, 0x8E);
@@ -108,6 +111,48 @@ static void init_idt() {
 	idt_set_gate(29, (u32)isr29, 0x08, 0x8E);
 	idt_set_gate(30, (u32)isr30, 0x08, 0x8E);
 	idt_set_gate(31, (u32)isr31, 0x08, 0x8E);
+
+	// re-map PIC，将master PIC映射到0x20-0x27, slave PIC映射到0x28-0x2f
+	u8 pic_master_mask, pic_slave_mask;
+	pic_master_mask = port_byte_in(PIC_MASTER_DATA); // 保存master/slave pic的掩码
+	pic_slave_mask = port_byte_in(PIC_SLAVE_DATA);
+
+	// 开始初始化（级联模式）
+	port_byte_out(PIC_MASTER_CONTROL, 0x11);
+	port_byte_out(PIC_SLAVE_CONTROL, 0x11);
+
+	// 重置向量表地址
+	port_byte_out(PIC_MASTER_DATA, 0x20);
+	port_byte_out(PIC_SLAVE_DATA, 0x28);
+
+	port_byte_out(PIC_MASTER_DATA, 0x04);	// 告诉master pic，slave pic的位置在IRQ2(0100b)
+	port_byte_out(PIC_SLAVE_DATA, 0x02);	// 告诉slave pic, 处于级联模式
+
+	port_byte_out(PIC_MASTER_DATA, 0x01);
+	port_byte_out(PIC_SLAVE_DATA, 0x01);
+
+	// 恢复掩码
+	port_byte_out(PIC_MASTER_DATA, pic_master_mask);
+	port_byte_out(PIC_SLAVE_DATA, pic_slave_mask);
+
+	// IRQ中断(中断号>=32)
+
+	idt_set_gate(32, (u32)irq0, 0x08, 0x8E);
+	idt_set_gate(33, (u32)irq1, 0x08, 0x8E);
+	idt_set_gate(34, (u32)irq2, 0x08, 0x8E);
+	idt_set_gate(35, (u32)irq3, 0x08, 0x8E);
+	idt_set_gate(36, (u32)irq4, 0x08, 0x8E);
+	idt_set_gate(37, (u32)irq5, 0x08, 0x8E);
+	idt_set_gate(38, (u32)irq6, 0x08, 0x8E);
+	idt_set_gate(39, (u32)irq7, 0x08, 0x8E);
+	idt_set_gate(40, (u32)irq8, 0x08, 0x8E);
+	idt_set_gate(41, (u32)irq9, 0x08, 0x8E);
+	idt_set_gate(42, (u32)irq10, 0x08, 0x8E);
+	idt_set_gate(43, (u32)irq11, 0x08, 0x8E);
+	idt_set_gate(44, (u32)irq12, 0x08, 0x8E);
+	idt_set_gate(45, (u32)irq13, 0x08, 0x8E);
+	idt_set_gate(46, (u32)irq14, 0x08, 0x8E);
+	idt_set_gate(47, (u32)irq15, 0x08, 0x8E);
 
 	idt_flush((u32)&idt_ptr);
 }

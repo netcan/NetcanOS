@@ -21,5 +21,6 @@ gdt_flush:
 idt_flush:
 	mov eax, [esp + 4]	; idt_ptr
 	lidt [eax]
+	sti	; 开中断，之前忘了导致定时器无法工作。
 	ret
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vsprintf',['vsprintf',['../stdio_8c.html#a760c2a9adc3e177ae208cf07c1424758',1,'vsprintf(char *str, const char *fmt, va_list args):&#160;stdio.c'],['../stdio_8h.html#ac556ff5283a45e1f41c7ef7edc72d225',1,'vsprintf(char *str, const char *fmt, va_list arg):&#160;stdio.c']]]
+  ['strlen',['strlen',['../string_8c.html#a008e171a518fe0e0352f31b245e03875',1,'strlen(const char *str):&#160;string.c'],['../string_8h.html#ae6c8de953239811a34eeeab09458e55e',1,'strlen(const char *str):&#160;string.c']]]
 ];

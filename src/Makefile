@@ -3,10 +3,10 @@ LD = i386-elf-ld
 GDB = i386-elf-gdb
 OBJCOPY = i386-elf-objcopy
 NASM = nasm
-CFLAGS = -g -m32 -ffreestanding -c -Ikernel -Idrivers -Ilibc
+CFLAGS = -g -m32 -ffreestanding -c -Ikernel -Idrivers -Ilibc -Icpu
 
-C_SOURCES = $(wildcard kernel/*.c drivers/*.c libc/*.c) # wildchard展开通配符列表
-HEADERS = $(wildcard kernel/*.h drivers/*.h libc/*.h)
+C_SOURCES = $(wildcard kernel/*.c drivers/*.c libc/*.c cpu/*.c) # wildchard展开通配符列表
+HEADERS = $(wildcard kernel/*.h drivers/*.h libc/*.h cpu/*.h)
 OBJS = $(C_SOURCES:.c=.o) # 将.c替换为.o
 
 
@@ -17,12 +17,13 @@ NetcanOS.bin: boot/bootloader.bin kernel/kernel.bin
 
 # 调试用
 kernel/kernel.elf: kernel/kernel_entry.o\
-	kernel/dt_flush.o\
-	kernel/interrupts.o\
+	cpu/dt_flush.o\
+	cpu/interrupts.o\
 	$(OBJS)
 	$(LD) -o $@ -Ttext 0x1000 $^
 
 kernel/kernel.bin: kernel/kernel.elf
+	# 利用objcopy从带符号的elf文件中抽出纯二进制文件
 	$(OBJCOPY) -O binary $< $@
 
 %.o: %.c $(HEADERS)
@@ -39,9 +40,9 @@ run: NetcanOS.bin
 	qemu-system-i386 -fda NetcanOS.bin
 
 debug: NetcanOS.bin kernel/kernel.elf kernel.gdb
-	$(GDB) -x kernel.gdb
+	$(GDB) -tui -x kernel.gdb
 
 clean:
 	rm -rf NetcanOS.bin
 	rm -rf kernel/*.bin kernel/*.elf
-	rm -rf kernel/*.o boot/*.bin drivers/*.o libc/*.o
+	rm -rf cpu/*.o  kernel/*.o boot/*.bin drivers/*.o libc/*.o

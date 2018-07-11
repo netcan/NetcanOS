@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/cpu/int_handler.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2c61f424fd391396db977702a2beee9a.html">cpu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">int_handler.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="io_8h_source.html">io.h</a>&gt;</code><br />
+</div>
+<p><a href="int__handler_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregisters.html">registers</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a8885a13da4dafeb2cb209ce1b7ec3107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a8885a13da4dafeb2cb209ce1b7ec3107">IRQ0</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:a8885a13da4dafeb2cb209ce1b7ec3107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37360776bcc1dd3b5da93b025177551f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a37360776bcc1dd3b5da93b025177551f">IRQ1</a>&#160;&#160;&#160;33</td></tr>
+<tr class="separator:a37360776bcc1dd3b5da93b025177551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5388784cb69a0b869c4e5f60c839ca24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a5388784cb69a0b869c4e5f60c839ca24">IRQ2</a>&#160;&#160;&#160;34</td></tr>
+<tr class="separator:a5388784cb69a0b869c4e5f60c839ca24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b769ff26428bc3b6f20cb46096f4a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a81b769ff26428bc3b6f20cb46096f4a2">IRQ3</a>&#160;&#160;&#160;35</td></tr>
+<tr class="separator:a81b769ff26428bc3b6f20cb46096f4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e56e05fa9adf8ddaaf6f44d999017db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a3e56e05fa9adf8ddaaf6f44d999017db">IRQ4</a>&#160;&#160;&#160;36</td></tr>
+<tr class="separator:a3e56e05fa9adf8ddaaf6f44d999017db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bd5ba58767b60d0639bd1a096dfdd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#af1bd5ba58767b60d0639bd1a096dfdd6">IRQ5</a>&#160;&#160;&#160;37</td></tr>
+<tr class="separator:af1bd5ba58767b60d0639bd1a096dfdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1282e4c3484ca4c0689e180c5a42a7a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a1282e4c3484ca4c0689e180c5a42a7a9">IRQ6</a>&#160;&#160;&#160;38</td></tr>
+<tr class="separator:a1282e4c3484ca4c0689e180c5a42a7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56b9fd6a60941e7594f299521575ca2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#ac56b9fd6a60941e7594f299521575ca2">IRQ7</a>&#160;&#160;&#160;39</td></tr>
+<tr class="separator:ac56b9fd6a60941e7594f299521575ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad299f4a78ead6e9f10cfa55376be25ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#ad299f4a78ead6e9f10cfa55376be25ac">IRQ8</a>&#160;&#160;&#160;40</td></tr>
+<tr class="separator:ad299f4a78ead6e9f10cfa55376be25ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59ffb9e0de6a5a1f9078a110460a2f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#af59ffb9e0de6a5a1f9078a110460a2f4">IRQ9</a>&#160;&#160;&#160;41</td></tr>
+<tr class="separator:af59ffb9e0de6a5a1f9078a110460a2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4937470287000533f2dc2d0c29b88245"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a4937470287000533f2dc2d0c29b88245">IRQ10</a>&#160;&#160;&#160;42</td></tr>
+<tr class="separator:a4937470287000533f2dc2d0c29b88245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb33d89dcebc322429644b7ce8d3d629"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#afb33d89dcebc322429644b7ce8d3d629">IRQ11</a>&#160;&#160;&#160;43</td></tr>
+<tr class="separator:afb33d89dcebc322429644b7ce8d3d629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57276d1481230d81d2bba849f935ce5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a57276d1481230d81d2bba849f935ce5a">IRQ12</a>&#160;&#160;&#160;44</td></tr>
+<tr class="separator:a57276d1481230d81d2bba849f935ce5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f5cba42d2e033d546107a80aa341ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a13f5cba42d2e033d546107a80aa341ea">IRQ13</a>&#160;&#160;&#160;45</td></tr>
+<tr class="separator:a13f5cba42d2e033d546107a80aa341ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9577b9424e1d50ffb437da2a7052f391"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a9577b9424e1d50ffb437da2a7052f391">IRQ14</a>&#160;&#160;&#160;46</td></tr>
+<tr class="separator:a9577b9424e1d50ffb437da2a7052f391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587f058bf281246693f934ab414f7d52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a587f058bf281246693f934ab414f7d52">IRQ15</a>&#160;&#160;&#160;47</td></tr>
+<tr class="separator:a587f058bf281246693f934ab414f7d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:adf58dbaf6139b4957c348711f2026957"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structregisters.html">registers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a></td></tr>
+<tr class="separator:adf58dbaf6139b4957c348711f2026957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788beec2c9a901b54e9da68604b0a526"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>) (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a>)</td></tr>
+<tr class="separator:a788beec2c9a901b54e9da68604b0a526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a700e3ca056bf69296370f504f2cb6cc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a700e3ca056bf69296370f504f2cb6cc8">isr_handler</a> (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a> regs)</td></tr>
+<tr class="memdesc:a700e3ca056bf69296370f504f2cb6cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号&lt;32），处理系统中断system error  <a href="#a700e3ca056bf69296370f504f2cb6cc8">更多...</a><br /></td></tr>
+<tr class="separator:a700e3ca056bf69296370f504f2cb6cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf1456cc8821e46127c8c8e5984529a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#a8cf1456cc8821e46127c8c8e5984529a">register_int_handler</a> (<a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> int_no, <a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> handler)</td></tr>
+<tr class="memdesc:a8cf1456cc8821e46127c8c8e5984529a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册中断程序  int_no 中断号  handler 中断处理程序  <a href="#a8cf1456cc8821e46127c8c8e5984529a">更多...</a><br /></td></tr>
+<tr class="separator:a8cf1456cc8821e46127c8c8e5984529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aeea7e5229feacff3af9e947a863f0c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8h.html#aeea7e5229feacff3af9e947a863f0c01">int_handlers</a> [0xff]</td></tr>
+<tr class="separator:aeea7e5229feacff3af9e947a863f0c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a8885a13da4dafeb2cb209ce1b7ec3107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8885a13da4dafeb2cb209ce1b7ec3107">&#9670;&nbsp;</a></span>IRQ0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ0&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37360776bcc1dd3b5da93b025177551f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37360776bcc1dd3b5da93b025177551f">&#9670;&nbsp;</a></span>IRQ1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ1&#160;&#160;&#160;33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4937470287000533f2dc2d0c29b88245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4937470287000533f2dc2d0c29b88245">&#9670;&nbsp;</a></span>IRQ10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ10&#160;&#160;&#160;42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb33d89dcebc322429644b7ce8d3d629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb33d89dcebc322429644b7ce8d3d629">&#9670;&nbsp;</a></span>IRQ11</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ11&#160;&#160;&#160;43</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57276d1481230d81d2bba849f935ce5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57276d1481230d81d2bba849f935ce5a">&#9670;&nbsp;</a></span>IRQ12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ12&#160;&#160;&#160;44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13f5cba42d2e033d546107a80aa341ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f5cba42d2e033d546107a80aa341ea">&#9670;&nbsp;</a></span>IRQ13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ13&#160;&#160;&#160;45</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9577b9424e1d50ffb437da2a7052f391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9577b9424e1d50ffb437da2a7052f391">&#9670;&nbsp;</a></span>IRQ14</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ14&#160;&#160;&#160;46</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a587f058bf281246693f934ab414f7d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587f058bf281246693f934ab414f7d52">&#9670;&nbsp;</a></span>IRQ15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ15&#160;&#160;&#160;47</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5388784cb69a0b869c4e5f60c839ca24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5388784cb69a0b869c4e5f60c839ca24">&#9670;&nbsp;</a></span>IRQ2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ2&#160;&#160;&#160;34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81b769ff26428bc3b6f20cb46096f4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b769ff26428bc3b6f20cb46096f4a2">&#9670;&nbsp;</a></span>IRQ3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ3&#160;&#160;&#160;35</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e56e05fa9adf8ddaaf6f44d999017db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e56e05fa9adf8ddaaf6f44d999017db">&#9670;&nbsp;</a></span>IRQ4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ4&#160;&#160;&#160;36</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1bd5ba58767b60d0639bd1a096dfdd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bd5ba58767b60d0639bd1a096dfdd6">&#9670;&nbsp;</a></span>IRQ5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ5&#160;&#160;&#160;37</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1282e4c3484ca4c0689e180c5a42a7a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1282e4c3484ca4c0689e180c5a42a7a9">&#9670;&nbsp;</a></span>IRQ6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ6&#160;&#160;&#160;38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac56b9fd6a60941e7594f299521575ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56b9fd6a60941e7594f299521575ca2">&#9670;&nbsp;</a></span>IRQ7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ7&#160;&#160;&#160;39</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad299f4a78ead6e9f10cfa55376be25ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad299f4a78ead6e9f10cfa55376be25ac">&#9670;&nbsp;</a></span>IRQ8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ8&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af59ffb9e0de6a5a1f9078a110460a2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af59ffb9e0de6a5a1f9078a110460a2f4">&#9670;&nbsp;</a></span>IRQ9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IRQ9&#160;&#160;&#160;41</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a788beec2c9a901b54e9da68604b0a526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788beec2c9a901b54e9da68604b0a526">&#9670;&nbsp;</a></span>int_handler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* int_handler_t) (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf58dbaf6139b4957c348711f2026957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf58dbaf6139b4957c348711f2026957">&#9670;&nbsp;</a></span>registers_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structregisters.html">registers</a>  <a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a700e3ca056bf69296370f504f2cb6cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700e3ca056bf69296370f504f2cb6cc8">&#9670;&nbsp;</a></span>isr_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void isr_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a>&#160;</td>
+          <td class="paramname"><em>regs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>中断处理程序（中断号&lt;32），处理系统中断system error </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regs</td><td>寄存器信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cf1456cc8821e46127c8c8e5984529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf1456cc8821e46127c8c8e5984529a">&#9670;&nbsp;</a></span>register_int_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void register_int_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="io_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>int_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册中断程序  int_no 中断号  handler 中断处理程序 </p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aeea7e5229feacff3af9e947a863f0c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea7e5229feacff3af9e947a863f0c01">&#9670;&nbsp;</a></span>int_handlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> int_handlers[0xff]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
