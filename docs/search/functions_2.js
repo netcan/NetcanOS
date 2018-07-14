@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gdt_5fflush',['gdt_flush',['../descriptor__tables_8c.html#a4d2aa562b23b7cae3a2e6601ee218551',1,'descriptor_tables.c']]]
+  ['clear_5fvt',['clear_vt',['../video__terminal_8c.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c'],['../video__terminal_8h.html#a871d397e5583c6aca1bcc33a9d8b331b',1,'clear_vt(void):&#160;video_terminal.c']]]
 ];

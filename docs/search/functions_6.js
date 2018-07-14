@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['register_5fint_5fhandler',['register_int_handler',['../int__handler_8c.html#a8cf1456cc8821e46127c8c8e5984529a',1,'register_int_handler(u8 int_no, int_handler_t handler):&#160;int_handler.c'],['../int__handler_8h.html#a8cf1456cc8821e46127c8c8e5984529a',1,'register_int_handler(u8 int_no, int_handler_t handler):&#160;int_handler.c']]]
+  ['kmalloc',['kmalloc',['../heap_8c.html#a7e005c230c09d0b95a8873f61fc931a7',1,'kmalloc(u32 sz, s32 aligned, u32 *phy_addr):&#160;heap.c'],['../heap_8h.html#a7e005c230c09d0b95a8873f61fc931a7',1,'kmalloc(u32 sz, s32 aligned, u32 *phy_addr):&#160;heap.c']]]
 ];

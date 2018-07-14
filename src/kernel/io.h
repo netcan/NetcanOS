@@ -5,8 +5,12 @@
 	  > Mail: 1469709759@qq.com
 	  > Created Time: 2018-07-08 Sun 13:17:16 CST
  ************************************************************************/
+#include <stddef.h>
+#include <stdio.h>
+
 #ifndef IO_H
 #define IO_H
+#define ASSERT(cond, msg) if(!(cond)) { printf("%s at %s:%d\n", msg, __FILE__, __LINE__); while(1); }
 typedef unsigned int u32;
 typedef signed int s32;
 typedef unsigned short u16;

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['max_5fcol',['MAX_COL',['../video__terminal_8h.html#a97e80440b5a5ec2ffc172dead9f8d2ec',1,'video_terminal.h']]],
-  ['max_5ffreq',['MAX_FREQ',['../timer_8h.html#a9f1abe07c4d92ce70925be770153bb5d',1,'timer.h']]],
-  ['max_5frow',['MAX_ROW',['../video__terminal_8h.html#ad5a8dfc9e1a303abf98b2705f3581afb',1,'video_terminal.h']]]
+  ['frame_5findex_5ffrom_5fbitset',['FRAME_INDEX_FROM_BITSET',['../paging_8h.html#a607ad9f49491adcc9c00d3aec59e8c1d',1,'paging.h']]],
+  ['frame_5foffset_5ffrom_5fbitset',['FRAME_OFFSET_FROM_BITSET',['../paging_8h.html#ae461b803907bd8821ecbbd38c405f98f',1,'paging.h']]]
 ];

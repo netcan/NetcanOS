@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: src/kernel/paging.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cbd7f246bdf7dc0a50281a272327e6ed.html">kernel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">paging.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="paging_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    &gt; File Name: kernel/paging.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">      &gt; Author: Netcan</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">      &gt; Blog: http://www.netcan666.com</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">      &gt; Mail: 1469709759@qq.com</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">      &gt; Created Time: 2018-07-13 Fri 16:59:08 CST</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ************************************************************************/</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="io_8h.html">io.h</a>&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="int__handler_8h.html">int_handler.h</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef PAGING_H</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define PAGING_H</span></div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="paging_8h.html#a607ad9f49491adcc9c00d3aec59e8c1d">   13</a></span>&#160;<span class="preprocessor">#define FRAME_INDEX_FROM_BITSET(addr) ((addr) / 32)</span></div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="paging_8h.html#ae461b803907bd8821ecbbd38c405f98f">   14</a></span>&#160;<span class="preprocessor">#define FRAME_OFFSET_FROM_BITSET(addr)  ((addr) % 32)</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structpage__t.html">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structpage__t.html#ae146a19e996ebc68f16a2f5aeb650a33">   20</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#ae146a19e996ebc68f16a2f5aeb650a33">present</a>         :1; </div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structpage__t.html#a57dc5e882e222eeb4a3f8ac51b7c432f">   21</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a57dc5e882e222eeb4a3f8ac51b7c432f">writeable</a>       :1; </div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structpage__t.html#af8b671c035f2e13638824b7b01c3b2e9">   22</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#af8b671c035f2e13638824b7b01c3b2e9">user</a>            :1; </div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structpage__t.html#a767b7bf5292dbd460b1eff23934fbdb2">   23</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a767b7bf5292dbd460b1eff23934fbdb2">reversed_lo</a>     :2; </div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structpage__t.html#a9b8d4d55a60c771534d765f8db5c551b">   24</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a9b8d4d55a60c771534d765f8db5c551b">accessed</a>        :1; </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structpage__t.html#a5b96b3482071f585d06492b506917970">   25</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a5b96b3482071f585d06492b506917970">dirty</a>           :1; </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structpage__t.html#a3f5f492d20d4516229c6ae72c23c1844">   26</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a3f5f492d20d4516229c6ae72c23c1844">reversed_hi</a>     :2; </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structpage__t.html#a82ec1dc4a35988facbecc3c59e2f82e9">   27</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a82ec1dc4a35988facbecc3c59e2f82e9">available</a>       :3; </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structpage__t.html#a0a4b019d6d6ad89a9b3484ffbd78fe9c">   28</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__t.html#a0a4b019d6d6ad89a9b3484ffbd78fe9c">frame</a>           :20;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <a class="code" href="structpage__t.html">page_t</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structpage__table__t.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structpage__table__t.html#a8ab21d9eca5afe5e21938da2c1e39436">   34</a></span>&#160;    <a class="code" href="structpage__t.html">page_t</a> pages[1024]; </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <a class="code" href="structpage__table__t.html">page_table_t</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structpage__directory__t.html">   40</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structpage__directory__t.html#a939ac3cafae2a0ad9f19f3310fe3a499">   41</a></span>&#160;    <a class="code" href="structpage__table__t.html">page_table_t</a> *tables[1024]; </div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structpage__directory__t.html#ae4992dfbc9e60fcf723d4bfb2db2f37e">   42</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> tables_physical[1024];  </div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structpage__directory__t.html#a10313948681cf9be825d606f13305159">   43</a></span>&#160;    <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> <a class="code" href="structpage__directory__t.html#a10313948681cf9be825d606f13305159">physical_address</a>; </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <a class="code" href="structpage__directory__t.html">page_directory_t</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="paging_8h.html#a919b727f386797a8b9d8eceb5c4e7313">init_paging</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="paging_8h.html#a6f2bd6a5d2bbda0dee6b65c511a9cb98">switch_page_directory</a>(<a class="code" href="structpage__directory__t.html">page_directory_t</a> *dir);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="structpage__t.html">page_t</a> *<a class="code" href="paging_8h.html#a8961a6e7a4bd5198155c5cabe8129aae">get_page</a>(<a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> address, <span class="keywordtype">int</span> make, <a class="code" href="structpage__directory__t.html">page_directory_t</a> *dir);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="paging_8h.html#a6293af8e675059a566216be86660854b">page_fault</a>(<a class="code" href="structregisters.html">registers_t</a> regs);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="paging_8h.html#adc3acb743ba8c61b154f5a33de65b844">alloc_frame</a>(<a class="code" href="structpage__t.html">page_t</a> *page, <span class="keywordtype">int</span> is_kernel, <span class="keywordtype">int</span> is_writeable, <a class="code" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> frame_addr);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="paging_8h.html#a5b8ed22ee60c3275eb0a80135d540799">free_frame</a>(<a class="code" href="structpage__t.html">page_t</a> *page);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="paging_8h_html_a6f2bd6a5d2bbda0dee6b65c511a9cb98"><div class="ttname"><a href="paging_8h.html#a6f2bd6a5d2bbda0dee6b65c511a9cb98">switch_page_directory</a></div><div class="ttdeci">void switch_page_directory(page_directory_t *dir)</div><div class="ttdoc">切换页目录。 </div><div class="ttdef"><b>Definition:</b> paging.c:126</div></div>
+<div class="ttc" id="structpage__t_html_a9b8d4d55a60c771534d765f8db5c551b"><div class="ttname"><a href="structpage__t.html#a9b8d4d55a60c771534d765f8db5c551b">page_t::accessed</a></div><div class="ttdeci">u32 accessed</div><div class="ttdoc">是否被CPU访问过 </div><div class="ttdef"><b>Definition:</b> paging.h:24</div></div>
+<div class="ttc" id="structpage__t_html_ae146a19e996ebc68f16a2f5aeb650a33"><div class="ttname"><a href="structpage__t.html#ae146a19e996ebc68f16a2f5aeb650a33">page_t::present</a></div><div class="ttdeci">u32 present</div><div class="ttdoc">当前页面是否位于内存 </div><div class="ttdef"><b>Definition:</b> paging.h:20</div></div>
+<div class="ttc" id="paging_8h_html_adc3acb743ba8c61b154f5a33de65b844"><div class="ttname"><a href="paging_8h.html#adc3acb743ba8c61b154f5a33de65b844">alloc_frame</a></div><div class="ttdeci">void alloc_frame(page_t *page, int is_kernel, int is_writeable, u32 frame_addr)</div><div class="ttdoc">分配页框。 </div><div class="ttdef"><b>Definition:</b> paging.c:59</div></div>
+<div class="ttc" id="structregisters_html"><div class="ttname"><a href="structregisters.html">registers</a></div><div class="ttdef"><b>Definition:</b> int_handler.h:29</div></div>
+<div class="ttc" id="paging_8h_html_a5b8ed22ee60c3275eb0a80135d540799"><div class="ttname"><a href="paging_8h.html#a5b8ed22ee60c3275eb0a80135d540799">free_frame</a></div><div class="ttdeci">void free_frame(page_t *page)</div><div class="ttdoc">释放页框 </div><div class="ttdef"><b>Definition:</b> paging.c:79</div></div>
+<div class="ttc" id="int__handler_8h_html"><div class="ttname"><a href="int__handler_8h.html">int_handler.h</a></div></div>
+<div class="ttc" id="structpage__directory__t_html"><div class="ttname"><a href="structpage__directory__t.html">page_directory_t</a></div><div class="ttdoc">页目录（一级页表）。 </div><div class="ttdef"><b>Definition:</b> paging.h:40</div></div>
+<div class="ttc" id="structpage__t_html_af8b671c035f2e13638824b7b01c3b2e9"><div class="ttname"><a href="structpage__t.html#af8b671c035f2e13638824b7b01c3b2e9">page_t::user</a></div><div class="ttdeci">u32 user</div><div class="ttdoc">是否属于用户模式 </div><div class="ttdef"><b>Definition:</b> paging.h:22</div></div>
+<div class="ttc" id="structpage__table__t_html"><div class="ttname"><a href="structpage__table__t.html">page_table_t</a></div><div class="ttdoc">页表（二级页表）。 </div><div class="ttdef"><b>Definition:</b> paging.h:33</div></div>
+<div class="ttc" id="paging_8h_html_a919b727f386797a8b9d8eceb5c4e7313"><div class="ttname"><a href="paging_8h.html#a919b727f386797a8b9d8eceb5c4e7313">init_paging</a></div><div class="ttdeci">void init_paging()</div><div class="ttdoc">初始化分页管理。 </div><div class="ttdef"><b>Definition:</b> paging.c:96</div></div>
+<div class="ttc" id="io_8h_html"><div class="ttname"><a href="io_8h.html">io.h</a></div></div>
+<div class="ttc" id="paging_8h_html_a8961a6e7a4bd5198155c5cabe8129aae"><div class="ttname"><a href="paging_8h.html#a8961a6e7a4bd5198155c5cabe8129aae">get_page</a></div><div class="ttdeci">page_t * get_page(u32 address, int make, page_directory_t *dir)</div><div class="ttdoc">获取页面。 </div><div class="ttdef"><b>Definition:</b> paging.c:141</div></div>
+<div class="ttc" id="paging_8h_html_a6293af8e675059a566216be86660854b"><div class="ttname"><a href="paging_8h.html#a6293af8e675059a566216be86660854b">page_fault</a></div><div class="ttdeci">void page_fault(registers_t regs)</div><div class="ttdoc">缺页中断处理程序。 </div><div class="ttdef"><b>Definition:</b> paging.c:160</div></div>
+<div class="ttc" id="structpage__t_html_a5b96b3482071f585d06492b506917970"><div class="ttname"><a href="structpage__t.html#a5b96b3482071f585d06492b506917970">page_t::dirty</a></div><div class="ttdeci">u32 dirty</div><div class="ttdoc">是否被CPU写过 </div><div class="ttdef"><b>Definition:</b> paging.h:25</div></div>
+<div class="ttc" id="structpage__t_html_a3f5f492d20d4516229c6ae72c23c1844"><div class="ttname"><a href="structpage__t.html#a3f5f492d20d4516229c6ae72c23c1844">page_t::reversed_hi</a></div><div class="ttdeci">u32 reversed_hi</div><div class="ttdoc">CPU内部保留用 </div><div class="ttdef"><b>Definition:</b> paging.h:26</div></div>
+<div class="ttc" id="structpage__t_html_a82ec1dc4a35988facbecc3c59e2f82e9"><div class="ttname"><a href="structpage__t.html#a82ec1dc4a35988facbecc3c59e2f82e9">page_t::available</a></div><div class="ttdeci">u32 available</div><div class="ttdoc">未使用，可供内核使用，本内核用来判断是否分配了页框 </div><div class="ttdef"><b>Definition:</b> paging.h:27</div></div>
+<div class="ttc" id="structpage__t_html_a767b7bf5292dbd460b1eff23934fbdb2"><div class="ttname"><a href="structpage__t.html#a767b7bf5292dbd460b1eff23934fbdb2">page_t::reversed_lo</a></div><div class="ttdeci">u32 reversed_lo</div><div class="ttdoc">CPU内部保留用 </div><div class="ttdef"><b>Definition:</b> paging.h:23</div></div>
+<div class="ttc" id="structpage__t_html_a0a4b019d6d6ad89a9b3484ffbd78fe9c"><div class="ttname"><a href="structpage__t.html#a0a4b019d6d6ad89a9b3484ffbd78fe9c">page_t::frame</a></div><div class="ttdeci">u32 frame</div><div class="ttdoc">页框号，也就是帧地址/0x1000 </div><div class="ttdef"><b>Definition:</b> paging.h:28</div></div>
+<div class="ttc" id="io_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> io.h:14</div></div>
+<div class="ttc" id="structpage__directory__t_html_a10313948681cf9be825d606f13305159"><div class="ttname"><a href="structpage__directory__t.html#a10313948681cf9be825d606f13305159">page_directory_t::physical_address</a></div><div class="ttdeci">u32 physical_address</div><div class="ttdoc">页目录的物理地址，告诉CPU页目录位置，区分页目录用 </div><div class="ttdef"><b>Definition:</b> paging.h:43</div></div>
+<div class="ttc" id="structpage__t_html"><div class="ttname"><a href="structpage__t.html">page_t</a></div><div class="ttdoc">分页页面数据结构。 </div><div class="ttdef"><b>Definition:</b> paging.h:19</div></div>
+<div class="ttc" id="structpage__t_html_a57dc5e882e222eeb4a3f8ac51b7c432f"><div class="ttname"><a href="structpage__t.html#a57dc5e882e222eeb4a3f8ac51b7c432f">page_t::writeable</a></div><div class="ttdeci">u32 writeable</div><div class="ttdoc">是否可写 </div><div class="ttdef"><b>Definition:</b> paging.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zeropad',['ZEROPAD',['../stdio_8c.html#aea43282ab1b4708d7657390fa01103ecaa68e4a41a52cd778065eaff1cba09dcb',1,'stdio.c']]]
+  ['white_5fon_5fblack',['WHITE_ON_BLACK',['../video__terminal_8h.html#a8f2c9cf0fdab9bec4e9cf716bb9f561d',1,'video_terminal.h']]],
+  ['writeable',['writeable',['../structpage__t.html#a57dc5e882e222eeb4a3f8ac51b7c432f',1,'page_t']]]
 ];

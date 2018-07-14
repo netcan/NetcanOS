@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: page_directory_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structpage__directory__t-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">page_directory_t结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>页目录（一级页表）。  
+ <a href="structpage__directory__t.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="paging_8h_source.html">paging.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a939ac3cafae2a0ad9f19f3310fe3a499"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpage__table__t.html">page_table_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__directory__t.html#a939ac3cafae2a0ad9f19f3310fe3a499">tables</a> [1024]</td></tr>
+<tr class="memdesc:a939ac3cafae2a0ad9f19f3310fe3a499"><td class="mdescLeft">&#160;</td><td class="mdescRight">页表指针，虚拟内存用  <a href="#a939ac3cafae2a0ad9f19f3310fe3a499">更多...</a><br /></td></tr>
+<tr class="separator:a939ac3cafae2a0ad9f19f3310fe3a499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4992dfbc9e60fcf723d4bfb2db2f37e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__directory__t.html#ae4992dfbc9e60fcf723d4bfb2db2f37e">tables_physical</a> [1024]</td></tr>
+<tr class="memdesc:ae4992dfbc9e60fcf723d4bfb2db2f37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">上述页表的物理地址，写进CR3寄存器生效  <a href="#ae4992dfbc9e60fcf723d4bfb2db2f37e">更多...</a><br /></td></tr>
+<tr class="separator:ae4992dfbc9e60fcf723d4bfb2db2f37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10313948681cf9be825d606f13305159"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__directory__t.html#a10313948681cf9be825d606f13305159">physical_address</a></td></tr>
+<tr class="memdesc:a10313948681cf9be825d606f13305159"><td class="mdescLeft">&#160;</td><td class="mdescRight">页目录的物理地址，告诉CPU页目录位置，区分页目录用  <a href="#a10313948681cf9be825d606f13305159">更多...</a><br /></td></tr>
+<tr class="separator:a10313948681cf9be825d606f13305159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>页目录（一级页表）。 </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a10313948681cf9be825d606f13305159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10313948681cf9be825d606f13305159">&#9670;&nbsp;</a></span>physical_address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_directory_t::physical_address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>页目录的物理地址，告诉CPU页目录位置，区分页目录用 </p>
+
+</div>
+</div>
+<a id="a939ac3cafae2a0ad9f19f3310fe3a499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939ac3cafae2a0ad9f19f3310fe3a499">&#9670;&nbsp;</a></span>tables</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpage__table__t.html">page_table_t</a>* page_directory_t::tables[1024]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>页表指针，虚拟内存用 </p>
+
+</div>
+</div>
+<a id="ae4992dfbc9e60fcf723d4bfb2db2f37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4992dfbc9e60fcf723d4bfb2db2f37e">&#9670;&nbsp;</a></span>tables_physical</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_directory_t::tables_physical[1024]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上述页表的物理地址，写进CR3寄存器生效 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>src/kernel/<a class="el" href="paging_8h_source.html">paging.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

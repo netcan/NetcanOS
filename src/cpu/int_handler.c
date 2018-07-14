@@ -10,7 +10,7 @@
 #include <descriptor_tables.h>
 #include <stdio.h>
 
-int_handler_t int_handlers[0xff];   // 中断处理程序，函数指针数组
+int_handler_t int_handlers[0x100];   // 中断处理程序，函数指针数组
 /** 注册中断程序
  * @params int_no 中断号
  * @params handler 中断处理程序
@@ -20,11 +20,11 @@ void register_int_handler(u8 int_no, int_handler_t handler) {
 }
 
 
-/** 中断处理程序（中断号<32），处理系统中断system error
+/** 中断处理程序（中断号<32，又叫异常），处理系统中断system error。
  * @param regs 寄存器信息
  */
 void isr_handler(registers_t regs) {
-	printf("ISR recieved: 0x%02x\n", regs.int_no);
+	printf("ISR(Exception) recieved: 0x%02x\n", regs.int_no);
     if(int_handlers[regs.int_no]) int_handlers[regs.int_no](regs);
 }
 

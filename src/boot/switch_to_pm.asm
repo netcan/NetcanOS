@@ -19,7 +19,7 @@ init_pm:
     mov fs, ax
     mov gs, ax
 
-    mov ebp, 0x90000 ;
+    mov ebp, 0x90000 ; 栈指针
     mov esp, ebp
 
     call begin_pm   ; 进入保护模式程序

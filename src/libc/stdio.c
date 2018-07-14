@@ -147,8 +147,9 @@ int vsprintf(char * str, const char * fmt, va_list args) {
 				break;
 			case 'p':
 				if(width == 0) {
-					width = 8;
+					width = 8 + 2;
 					flags |= ZEROPAD;
+					flags |= BASESIGN;
 				}
 				str = num_to_str(str, (unsigned long)va_arg(args, void*), 16, width, precision, flags);
 				break;

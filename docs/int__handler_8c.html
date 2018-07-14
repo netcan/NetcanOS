@@ -83,7 +83,7 @@ $(function() {
 <tr class="memdesc:a8cf1456cc8821e46127c8c8e5984529a"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册中断程序  int_no 中断号  handler 中断处理程序  <a href="#a8cf1456cc8821e46127c8c8e5984529a">更多...</a><br /></td></tr>
 <tr class="separator:a8cf1456cc8821e46127c8c8e5984529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a700e3ca056bf69296370f504f2cb6cc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a700e3ca056bf69296370f504f2cb6cc8">isr_handler</a> (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a> regs)</td></tr>
-<tr class="memdesc:a700e3ca056bf69296370f504f2cb6cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号&lt;32），处理系统中断system error  <a href="#a700e3ca056bf69296370f504f2cb6cc8">更多...</a><br /></td></tr>
+<tr class="memdesc:a700e3ca056bf69296370f504f2cb6cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号&lt;32，又叫异常），处理系统中断system error。  <a href="#a700e3ca056bf69296370f504f2cb6cc8">更多...</a><br /></td></tr>
 <tr class="separator:a700e3ca056bf69296370f504f2cb6cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3d6c92004ced19d9683425eafd03d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a4f3d6c92004ced19d9683425eafd03d6">irq_handler</a> (<a class="el" href="int__handler_8h.html#adf58dbaf6139b4957c348711f2026957">registers_t</a> regs)</td></tr>
 <tr class="memdesc:a4f3d6c92004ced19d9683425eafd03d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">中断处理程序（中断号32-47）  <a href="#a4f3d6c92004ced19d9683425eafd03d6">更多...</a><br /></td></tr>
@@ -91,8 +91,8 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:aeea7e5229feacff3af9e947a863f0c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#aeea7e5229feacff3af9e947a863f0c01">int_handlers</a> [0xff]</td></tr>
-<tr class="separator:aeea7e5229feacff3af9e947a863f0c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cc22b75eee169cdad64ba7280166db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="int__handler_8c.html#a99cc22b75eee169cdad64ba7280166db">int_handlers</a> [0x100]</td></tr>
+<tr class="separator:a99cc22b75eee169cdad64ba7280166db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="a4f3d6c92004ced19d9683425eafd03d6"></a>
@@ -137,7 +137,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>中断处理程序（中断号&lt;32），处理系统中断system error </p>
+<p>中断处理程序（中断号&lt;32，又叫异常），处理系统中断system error。 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">regs</td><td>寄存器信息 </td></tr>
@@ -178,14 +178,14 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">变量说明</h2>
-<a id="aeea7e5229feacff3af9e947a863f0c01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea7e5229feacff3af9e947a863f0c01">&#9670;&nbsp;</a></span>int_handlers</h2>
+<a id="a99cc22b75eee169cdad64ba7280166db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cc22b75eee169cdad64ba7280166db">&#9670;&nbsp;</a></span>int_handlers</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> int_handlers[0xff]</td>
+          <td class="memname"><a class="el" href="int__handler_8h.html#a788beec2c9a901b54e9da68604b0a526">int_handler_t</a> int_handlers[0x100]</td>
         </tr>
       </table>
 </div><div class="memdoc">

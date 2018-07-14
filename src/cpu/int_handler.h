@@ -36,6 +36,6 @@ typedef struct registers {
 void isr_handler(registers_t regs);
 
 typedef void (*int_handler_t)(registers_t);
-extern int_handler_t int_handlers[0xff];
+extern int_handler_t int_handlers[0x100];
 void register_int_handler(u8 int_no, int_handler_t handler);
 #endif

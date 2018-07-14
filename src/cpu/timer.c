@@ -13,7 +13,7 @@
 u32 tick = 0; //!< 定时器中断次数
 
 static void timer_callback(registers_t regs) {
-	printf("tick: %d\n", tick);
+	/*printf("tick: %d\n", tick);*/
 	++tick;
 }
 

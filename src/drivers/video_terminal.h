@@ -26,7 +26,7 @@
 
 #define TABSIZE 8 //!< TAB制表符的长度
 
-extern u8 *VRAM;
+extern u8 * const VRAM;
 void clear_vt(void);
 
 void print_char(char character, int row, int col, char attribute_byte);

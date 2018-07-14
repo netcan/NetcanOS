@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tick',['tick',['../timer_8c.html#ae5c2828cca3b6aaf6ed0517ad5f1a45b',1,'tick():&#160;timer.c'],['../timer_8h.html#ae5c2828cca3b6aaf6ed0517ad5f1a45b',1,'tick():&#160;timer.c']]]
+  ['nframes',['nframes',['../paging_8c.html#a3337b35daceb6ab9c5edf3bf526e469a',1,'paging.c']]]
 ];

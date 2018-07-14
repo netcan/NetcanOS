@@ -10,7 +10,7 @@
 #include <video_terminal.h>
 #include <string.h>
 
-u8 *VRAM = (u8*)VRAM_ADDRESS; //<! 显存指针
+u8 * const VRAM = (u8*)VRAM_ADDRESS; //<! 显存指针
 
 /** 根据row和col计算屏幕的偏移量。
  * offset = (row * MAX_COL + col) * 2

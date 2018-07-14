@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NetcanOS: page_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NetcanOS
+   </div>
+   <div id="projectbrief">Netcan OS is an operation system for x86 PCs, for learning how os works.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structpage__t-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">page_t结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>分页页面数据结构。  
+ <a href="structpage__t.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="paging_8h_source.html">paging.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ae146a19e996ebc68f16a2f5aeb650a33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#ae146a19e996ebc68f16a2f5aeb650a33">present</a>:1</td></tr>
+<tr class="memdesc:ae146a19e996ebc68f16a2f5aeb650a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前页面是否位于内存  <a href="#ae146a19e996ebc68f16a2f5aeb650a33">更多...</a><br /></td></tr>
+<tr class="separator:ae146a19e996ebc68f16a2f5aeb650a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57dc5e882e222eeb4a3f8ac51b7c432f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a57dc5e882e222eeb4a3f8ac51b7c432f">writeable</a>:1</td></tr>
+<tr class="memdesc:a57dc5e882e222eeb4a3f8ac51b7c432f"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否可写  <a href="#a57dc5e882e222eeb4a3f8ac51b7c432f">更多...</a><br /></td></tr>
+<tr class="separator:a57dc5e882e222eeb4a3f8ac51b7c432f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b671c035f2e13638824b7b01c3b2e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#af8b671c035f2e13638824b7b01c3b2e9">user</a>:1</td></tr>
+<tr class="memdesc:af8b671c035f2e13638824b7b01c3b2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否属于用户模式  <a href="#af8b671c035f2e13638824b7b01c3b2e9">更多...</a><br /></td></tr>
+<tr class="separator:af8b671c035f2e13638824b7b01c3b2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767b7bf5292dbd460b1eff23934fbdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a767b7bf5292dbd460b1eff23934fbdb2">reversed_lo</a>:2</td></tr>
+<tr class="memdesc:a767b7bf5292dbd460b1eff23934fbdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU内部保留用  <a href="#a767b7bf5292dbd460b1eff23934fbdb2">更多...</a><br /></td></tr>
+<tr class="separator:a767b7bf5292dbd460b1eff23934fbdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8d4d55a60c771534d765f8db5c551b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a9b8d4d55a60c771534d765f8db5c551b">accessed</a>:1</td></tr>
+<tr class="memdesc:a9b8d4d55a60c771534d765f8db5c551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否被CPU访问过  <a href="#a9b8d4d55a60c771534d765f8db5c551b">更多...</a><br /></td></tr>
+<tr class="separator:a9b8d4d55a60c771534d765f8db5c551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b96b3482071f585d06492b506917970"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a5b96b3482071f585d06492b506917970">dirty</a>:1</td></tr>
+<tr class="memdesc:a5b96b3482071f585d06492b506917970"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否被CPU写过  <a href="#a5b96b3482071f585d06492b506917970">更多...</a><br /></td></tr>
+<tr class="separator:a5b96b3482071f585d06492b506917970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5f492d20d4516229c6ae72c23c1844"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a3f5f492d20d4516229c6ae72c23c1844">reversed_hi</a>:2</td></tr>
+<tr class="memdesc:a3f5f492d20d4516229c6ae72c23c1844"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU内部保留用  <a href="#a3f5f492d20d4516229c6ae72c23c1844">更多...</a><br /></td></tr>
+<tr class="separator:a3f5f492d20d4516229c6ae72c23c1844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ec1dc4a35988facbecc3c59e2f82e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a82ec1dc4a35988facbecc3c59e2f82e9">available</a>:3</td></tr>
+<tr class="memdesc:a82ec1dc4a35988facbecc3c59e2f82e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">未使用，可供内核使用，本内核用来判断是否分配了页框  <a href="#a82ec1dc4a35988facbecc3c59e2f82e9">更多...</a><br /></td></tr>
+<tr class="separator:a82ec1dc4a35988facbecc3c59e2f82e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4b019d6d6ad89a9b3484ffbd78fe9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpage__t.html#a0a4b019d6d6ad89a9b3484ffbd78fe9c">frame</a>:20</td></tr>
+<tr class="memdesc:a0a4b019d6d6ad89a9b3484ffbd78fe9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">页框号，也就是帧地址/0x1000  <a href="#a0a4b019d6d6ad89a9b3484ffbd78fe9c">更多...</a><br /></td></tr>
+<tr class="separator:a0a4b019d6d6ad89a9b3484ffbd78fe9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>分页页面数据结构。 </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a9b8d4d55a60c771534d765f8db5c551b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8d4d55a60c771534d765f8db5c551b">&#9670;&nbsp;</a></span>accessed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::accessed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否被CPU访问过 </p>
+
+</div>
+</div>
+<a id="a82ec1dc4a35988facbecc3c59e2f82e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ec1dc4a35988facbecc3c59e2f82e9">&#9670;&nbsp;</a></span>available</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::available</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>未使用，可供内核使用，本内核用来判断是否分配了页框 </p>
+
+</div>
+</div>
+<a id="a5b96b3482071f585d06492b506917970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b96b3482071f585d06492b506917970">&#9670;&nbsp;</a></span>dirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::dirty</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否被CPU写过 </p>
+
+</div>
+</div>
+<a id="a0a4b019d6d6ad89a9b3484ffbd78fe9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4b019d6d6ad89a9b3484ffbd78fe9c">&#9670;&nbsp;</a></span>frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::frame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>页框号，也就是帧地址/0x1000 </p>
+
+</div>
+</div>
+<a id="ae146a19e996ebc68f16a2f5aeb650a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae146a19e996ebc68f16a2f5aeb650a33">&#9670;&nbsp;</a></span>present</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::present</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>当前页面是否位于内存 </p>
+
+</div>
+</div>
+<a id="a3f5f492d20d4516229c6ae72c23c1844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5f492d20d4516229c6ae72c23c1844">&#9670;&nbsp;</a></span>reversed_hi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::reversed_hi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU内部保留用 </p>
+
+</div>
+</div>
+<a id="a767b7bf5292dbd460b1eff23934fbdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767b7bf5292dbd460b1eff23934fbdb2">&#9670;&nbsp;</a></span>reversed_lo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::reversed_lo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU内部保留用 </p>
+
+</div>
+</div>
+<a id="af8b671c035f2e13638824b7b01c3b2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b671c035f2e13638824b7b01c3b2e9">&#9670;&nbsp;</a></span>user</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::user</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否属于用户模式 </p>
+
+</div>
+</div>
+<a id="a57dc5e882e222eeb4a3f8ac51b7c432f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57dc5e882e222eeb4a3f8ac51b7c432f">&#9670;&nbsp;</a></span>writeable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> page_t::writeable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否可写 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>src/kernel/<a class="el" href="paging_8h_source.html">paging.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

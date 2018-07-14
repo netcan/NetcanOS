@@ -20,7 +20,7 @@ kernel/kernel.elf: kernel/kernel_entry.o\
 	cpu/dt_flush.o\
 	cpu/interrupts.o\
 	$(OBJS)
-	$(LD) -o $@ -Ttext 0x1000 $^
+	$(LD) -Tlink.ld -o $@ $^
 
 kernel/kernel.bin: kernel/kernel.elf
 	# 利用objcopy从带符号的elf文件中抽出纯二进制文件

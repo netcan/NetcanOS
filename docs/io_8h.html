@@ -67,15 +67,23 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle">
 <div class="title">io.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;<a class="el" href="stddef_8h_source.html">stddef.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdio_8h_source.html">stdio.h</a>&gt;</code><br />
+</div>
 <p><a href="io_8h_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ac6c818ab7aca2e521c97eee817f99f91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#ac6c818ab7aca2e521c97eee817f99f91">ASSERT</a>(cond,  msg)&#160;&#160;&#160;if(!(cond)) { <a class="el" href="stdio_8h.html#a55f3d956bb2ba20b5059e9e25484a47f">printf</a>(&quot;%s at %s:%d\n&quot;, msg, __FILE__, __LINE__); while(1); }</td></tr>
+<tr class="separator:ac6c818ab7aca2e521c97eee817f99f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:a10e94b422ef0c20dcdec20d31a1f5049"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></td></tr>
@@ -106,6 +114,35 @@ $(function() {
 <tr class="memdesc:ab6b829a5f7204386efb421c5127f0ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">从IO端口写入16位数据。  <a href="#ab6b829a5f7204386efb421c5127f0ff5">更多...</a><br /></td></tr>
 <tr class="separator:ab6b829a5f7204386efb421c5127f0ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ac6c818ab7aca2e521c97eee817f99f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c818ab7aca2e521c97eee817f99f91">&#9670;&nbsp;</a></span>ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;if(!(cond)) { <a class="el" href="stdio_8h.html#a55f3d956bb2ba20b5059e9e25484a47f">printf</a>(&quot;%s at %s:%d\n&quot;, msg, __FILE__, __LINE__); while(1); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">类型定义说明</h2>
 <a id="a5ffa4f640862b25ba6d4f635b78bdbe1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ffa4f640862b25ba6d4f635b78bdbe1">&#9670;&nbsp;</a></span>s16</h2>
