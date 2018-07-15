@@ -8,7 +8,7 @@
 
 #include <heap.h>
 
-extern u32 end;
+extern u32 end; //!< 内核区域结束地址
 u32 heap_placement_address = (u32)&end; //!< 堆地址，分配内存用
 
 /** 内核内存分配函数

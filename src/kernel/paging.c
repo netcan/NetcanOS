@@ -12,7 +12,7 @@
 #include <string.h>
 
 u32 *frame_bitset; //!< 页框frame的bitset形式，物理内存
-u32 nframes = 0x1000;	//!< 页框数量，假设物理内存16MB大，那么0x1000000 / 0x1000 = 0x1000
+u32 nframes = 0x100000;	//!< 页框数量，假设物理内存4GB大，那么0x100000000 / 0x1000 = 0x100000
 
 static page_directory_t *kernel_directory, *current_directory;
 
@@ -60,7 +60,7 @@ void alloc_frame(page_t *page, int is_kernel, int is_writeable, u32 frame) {
 	if(page) {
 		if(page->available) return;
 		else {
-			if(frame == ~0u) frame = first_frame();
+			if(frame == ~0u || test_frame(frame)) frame = first_frame();
 			ASSERT(frame != ~0u, "no free page frame!");
 
 			set_frame(frame);
@@ -84,13 +84,6 @@ void free_frame(page_t *page) {
 	}
 }
 
-// 获取栈指针
-static u32 get_esp() {
-	u32 esp;
-	asm volatile("mov %%esp, %0": "=r"(esp));
-	return esp;
-}
-
 /** 初始化分页管理。
 */
 void init_paging() {
@@ -102,16 +95,12 @@ void init_paging() {
 	memset(kernel_directory, 0, sizeof(page_directory_t));
 	current_directory = kernel_directory;
 
-	// 分配页框，使得物理地址和虚拟地址一致，并为已用过的内核空间分配页框
-	for(u32 i = 0; i < heap_placement_address; i += 0x1000)
+	/** 分配页框，使得物理地址和虚拟地址一致，并为已用过的内核空间分配页框。
+	 * 由于内核加载到0x1000，后面有VRAM位于0xb8000，并且栈指针位于0x90000，所以覆盖完整个1MB空间。
+	 */
+	for(u32 i = 0; i < 0x100000; i += 0x1000)
 		alloc_frame(get_page(i, 1, kernel_directory), 0, 0, i / 0x1000); // 内核页面不可读
 
-	// 分配内核栈空间页框
-	u32 esp = get_esp();
-	alloc_frame(get_page(esp, 1, kernel_directory), 0, 0, esp / 0x1000);
-
-	// 分配显存内存空间页框，0xb8000~0xb8fa0
-	alloc_frame(get_page(VRAM_ADDRESS, 1, kernel_directory), 0, 0, VRAM_ADDRESS / 0x1000);
 
 	// 注册页面错误中断处理程序
 	register_int_handler(14, &page_fault);

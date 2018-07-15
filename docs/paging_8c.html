@@ -104,8 +104,8 @@ $(function() {
 <tr class="memitem:ab3b306e80e60be2a71d9513140e80b71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#ab3b306e80e60be2a71d9513140e80b71">frame_bitset</a></td></tr>
 <tr class="memdesc:ab3b306e80e60be2a71d9513140e80b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">页框frame的bitset形式，物理内存  <a href="#ab3b306e80e60be2a71d9513140e80b71">更多...</a><br /></td></tr>
 <tr class="separator:ab3b306e80e60be2a71d9513140e80b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3337b35daceb6ab9c5edf3bf526e469a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a3337b35daceb6ab9c5edf3bf526e469a">nframes</a> = 0x1000</td></tr>
-<tr class="memdesc:a3337b35daceb6ab9c5edf3bf526e469a"><td class="mdescLeft">&#160;</td><td class="mdescRight">页框数量，假设物理内存16MB大，那么0x1000000 / 0x1000 = 0x1000  <a href="#a3337b35daceb6ab9c5edf3bf526e469a">更多...</a><br /></td></tr>
+<tr class="memitem:a3337b35daceb6ab9c5edf3bf526e469a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a3337b35daceb6ab9c5edf3bf526e469a">nframes</a> = 0x100000</td></tr>
+<tr class="memdesc:a3337b35daceb6ab9c5edf3bf526e469a"><td class="mdescLeft">&#160;</td><td class="mdescRight">页框数量，假设物理内存4GB大，那么0x100000000 / 0x1000 = 0x100000  <a href="#a3337b35daceb6ab9c5edf3bf526e469a">更多...</a><br /></td></tr>
 <tr class="separator:a3337b35daceb6ab9c5edf3bf526e469a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -247,6 +247,7 @@ $(function() {
 </div><div class="memdoc">
 
 <p>初始化分页管理。 </p>
+<p>分配页框，使得物理地址和虚拟地址一致，并为已用过的内核空间分配页框。 由于内核加载到0x1000，后面有VRAM位于0xb8000，并且栈指针位于0x90000，所以覆盖完整个1MB空间。</p>
 
 </div>
 </div>
@@ -320,12 +321,12 @@ $(function() {
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> nframes = 0x1000</td>
+          <td class="memname"><a class="el" href="io_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> nframes = 0x100000</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>页框数量，假设物理内存16MB大，那么0x1000000 / 0x1000 = 0x1000 </p>
+<p>页框数量，假设物理内存4GB大，那么0x100000000 / 0x1000 = 0x100000 </p>
 
 </div>
 </div>

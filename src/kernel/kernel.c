@@ -27,5 +27,5 @@ void main() {
 			printf("%dx%d=%2d\t", i, j, i * j);
 		printf("\n");
 	}
-	int test_page_fault = *(int*)0x12345678;
+	int test_page_fault = *(int*)0xffffd;
 }
